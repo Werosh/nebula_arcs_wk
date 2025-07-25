@@ -1,6 +1,8 @@
 import { ArrowDown, Sparkles, Zap, Globe } from "lucide-react";
 import { motion } from "framer-motion";
 
+import HeroImg from "../assets/images/hero_img_1.webp";
+
 export const HeroSection = () => {
   // Animation variants
   const containerVariants = {
@@ -197,7 +199,7 @@ export const HeroSection = () => {
                   transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
                   className="text-2xl md:text-3xl font-bold text-blue-400"
                 >
-                  500+
+                  20+
                 </motion.div>
                 <div className="text-sm text-gray-400 mt-1">Projects</div>
               </div>
@@ -208,7 +210,7 @@ export const HeroSection = () => {
                   transition={{ delay: 1.4, type: "spring", stiffness: 200 }}
                   className="text-2xl md:text-3xl font-bold text-purple-400"
                 >
-                  100+
+                  30+
                 </motion.div>
                 <div className="text-sm text-gray-400 mt-1">Clients</div>
               </div>
@@ -219,7 +221,7 @@ export const HeroSection = () => {
                   transition={{ delay: 1.6, type: "spring", stiffness: 200 }}
                   className="text-2xl md:text-3xl font-bold text-pink-400"
                 >
-                  5+
+                  3+
                 </motion.div>
                 <div className="text-sm text-gray-400 mt-1">Years</div>
               </div>
@@ -254,16 +256,12 @@ export const HeroSection = () => {
                 />
                 {/* IMAGE */}
                 <div className="relative bg-gradient-to-br from-gray-700 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-600">
-                  <div className="aspect-square bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-2xl flex items-center justify-center">
-                    {/* Replace this div with your actual image */}
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{
-                        duration: 20,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                      className="w-32 h-32 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-full opacity-50"
+                  <div className="aspect-square bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                    {/* Replace the div with an actual image */}
+                    <img
+                      src={HeroImg}
+                      alt="Descriptive alt text"
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   </div>
 
@@ -327,7 +325,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2, duration: 0.8 }}
@@ -346,7 +344,7 @@ export const HeroSection = () => {
         >
           <ArrowDown className="h-5 w-5 text-blue-400" />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
