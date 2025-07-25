@@ -1,30 +1,9 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
-const packages = [
- // Web Application
-  // { name: "HTML/CSS", level: 95, category: "Web Application" },
-  // { name: "JavaScript", level: 90, category: "Web Application" },
-  // { name: "React", level: 90, category: "frontend" },
-  // { name: "TypeScript", level: 85, category: "frontend" },
-  // { name: "Tailwind CSS", level: 90, category: "frontend" },
-  // { name: "Next.js", level: 80, category: "frontend" },
+const packages = [];
 
-  // // Backend
-  // { name: "Node.js", level: 80, category: "backend" },
-  // { name: "Express", level: 75, category: "backend" },
-  // { name: "MongoDB", level: 70, category: "backend" },
-  // { name: "PostgreSQL", level: 65, category: "backend" },
-  // { name: "GraphQL", level: 60, category: "backend" },
-
-  // // Tools
-  // { name: "Git/GitHub", level: 90, category: "tools" },
-  // { name: "Docker", level: 70, category: "tools" },
-  // { name: "Figma", level: 85, category: "tools" },
-  // { name: "VS Code", level: 95, category: "tools" },
-];
-
-const categories = ["all", "Web Application", "Mobile Application", "Desktop Application", "SEO", "Digital Marketing", "Graphic Design", "Video Editing", "Photography", "Content Creation", "Video Creation"];
+const categories = [];
 
 export const PackagesSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

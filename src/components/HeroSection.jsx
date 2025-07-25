@@ -125,7 +125,7 @@ export const HeroSection = () => {
                 </span>
               </motion.div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight dark:text-gray-800">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight dark:text-[#043b4f]">
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
