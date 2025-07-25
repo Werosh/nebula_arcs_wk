@@ -125,7 +125,7 @@ export const HeroSection = () => {
                 </span>
               </motion.div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight dark:text-gray-800">
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export const HeroSection = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+              className="text-xl md:text-2xl  text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed dark:text-gray-600"
             >
               Arcing Innovation Across the{" "}
               <span className="text-blue-400 font-semibold">
@@ -180,7 +180,7 @@ export const HeroSection = () => {
                 href="#about"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-semibold rounded-full hover:border-blue-400 hover:text-blue-400 transition-all duration-300 flex items-center gap-2 justify-center"
+                className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-semibold rounded-full hover:border-blue-400 hover:text-blue-400 transition-all duration-300 flex items-center gap-2 justify-center dark:text-gray-700"
               >
                 <Globe className="h-5 w-5" />
                 Learn More
@@ -255,7 +255,7 @@ export const HeroSection = () => {
                   }}
                 />
                 {/* IMAGE */}
-                <div className="relative bg-gradient-to-br from-gray-700 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-600">
+                <div className="relative bg-gradient-to-br from-gray-700/20 to-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-600">
                   <div className="aspect-square bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-2xl flex items-center justify-center overflow-hidden">
                     {/* Replace the div with an actual image */}
                     <img
