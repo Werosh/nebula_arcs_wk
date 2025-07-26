@@ -145,9 +145,6 @@ export default function Navbar() {
                 <div className="relative bg-gradient-to-r from-[#043b4f] via-blue-600 to-teal-500 bg-clip-text text-transparent text-xl sm:text-2xl lg:text-3xl font-black tracking-tight leading-none">
                   NEBULA ARCS
                 </div>
-                <div className="text-xs text-gray-400 font-medium tracking-wider">
-                  CREATIVE STUDIO
-                </div>
               </div>
             </button>
 

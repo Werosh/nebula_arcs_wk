@@ -180,9 +180,6 @@ export default function Footer() {
                       <div className="text-xl font-bold bg-gradient-to-r from-[#043b4f] via-blue-500 to-teal-400 bg-clip-text text-transparent">
                         NEBULA ARCS
                       </div>
-                      <div className="text-xs text-gray-400 font-medium">
-                        CREATIVE STUDIO
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -192,17 +189,21 @@ export default function Footer() {
                 </p>
 
                 <div className="space-y-3 text-sm text-gray-400">
-                  <div className="flex items-center space-x-3">
-                    <MapPin size={16} className="text-[#043b4f]" />
-                    <span>123 Innovation Street, Tech City</span>
+                  <div className="flex items-start space-x-3">
+                    <MapPin size={16} className="mt-1 text-[#043b4f]" />
+                    <div>
+                      <span>398/1 B Kaduwela Road,</span>
+                      <br />
+                      <span>Malabe, Sri Lanka</span>
+                    </div>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Mail size={16} className="text-[#043b4f]" />
-                    <span>hello@nebulaarcs.com</span>
+                    <span>info@nebulaarcs.com</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone size={16} className="text-[#043b4f]" />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+94 70 360 8328</span>
                   </div>
                 </div>
               </div>
