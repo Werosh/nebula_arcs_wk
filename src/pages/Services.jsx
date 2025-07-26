@@ -31,6 +31,7 @@ const Services = () => {
       details:
         "We create stunning, responsive websites using the latest technologies like React, Next.js, and modern CSS frameworks. Our websites are optimized for performance, SEO, and user experience across all devices.",
       features: [
+        "Customer Web Design",
         "Responsive Design",
         "SEO Optimized",
         "Fast Loading",
