@@ -2,39 +2,40 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+import FlareUpImg from "../assets/project_images/flareup.webp";
+import VacanzaImg from "../assets/project_images/vacanza.webp";
+import RubiImg from "../assets/project_images/rubi.webp";
+
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Flareup E-Commerce Platform",
     description:
       "A modern, responsive e-commerce solution with advanced filtering, payment integration, and real-time inventory management.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    demoUrl: "https://demo-ecommerce.com",
-    githubUrl: "https://github.com/example/ecommerce",
+    image: FlareUpImg,
+    tags: [],
+    demoUrl: "https://flareupclothing.com/",
+    githubUrl: "",
   },
   {
     id: 2,
-    title: "AI-Powered Dashboard",
+    title: "Vacanza in Ceylon – Luxury Travel Website",
     description:
-      "An intelligent analytics dashboard with machine learning insights, data visualization, and predictive analytics.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop",
-    tags: ["Python", "TensorFlow", "React", "D3.js"],
-    demoUrl: "https://demo-dashboard.com",
-    githubUrl: "https://github.com/example/ai-dashboard",
+      "A modern, multilingual travel platform designed for Italian tourists exploring Sri Lanka. Features include curated tour packages, immersive visuals, mobile-friendly UI, and SEO-optimized structure for maximum reach and conversions..",
+    image: VacanzaImg,
+    tags: [],
+    demoUrl: "https://www.vacanzainceylon.com/",
+    githubUrl: "",
   },
   {
     id: 3,
-    title: "Social Media App",
+    title: "Rubi.lk – E‑Commerce Website",
     description:
-      "A feature-rich social platform with real-time messaging, content sharing, and advanced privacy controls.",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500&h=300&fit=crop",
-    tags: ["React Native", "Firebase", "Socket.io", "AWS"],
-    demoUrl: "https://demo-social.com",
-    githubUrl: "https://github.com/example/social-app",
+      "A sleek and responsive online store for electronics in Sri Lanka, featuring fast delivery, secure payments, and an easy shopping experience focused on tech and entertainment products.",
+    image: RubiImg,
+    tags: [],
+    demoUrl: "https://rubistore.lk/",
+    githubUrl: "",
   },
 ];
 

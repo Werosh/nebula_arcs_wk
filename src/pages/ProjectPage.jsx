@@ -7,8 +7,15 @@ import {
   Search,
   Calendar,
   User,
-  Tag,
 } from "lucide-react";
+
+// website development images
+import FlareUpImg from "../assets/project_images/flareup.webp";
+import VacanzaImg from "../assets/project_images/vacanza.webp";
+import RubiImg from "../assets/project_images/rubi.webp";
+import RuhunuImg from "../assets/project_images/ruhunuprimeland.webp";
+import VisaImg from "../assets/project_images/vizalk.webp";
+import LucianImg from "../assets/project_images/lucian.webp";
 
 const categories = [
   "All Projects",
@@ -32,192 +39,246 @@ const projects = [
   // Website Development
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Flareup E-Commerce Platform",
     description:
-      "Modern responsive e-commerce solution with advanced filtering, payment integration, and inventory management.",
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      "A modern, responsive e-commerce solution with advanced filtering, payment integration, and real-time inventory management.",
+    image: FlareUpImg,
     category: "Website Development",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    demoUrl: "https://demo-ecommerce.com",
-    githubUrl: "https://github.com/example/ecommerce",
-    date: "2024-03-15",
-    client: "Tech Solutions Inc.",
+    tags: [],
+    demoUrl: "https://flareupclothing.com/",
+    githubUrl: "",
+    date: "2024-08-12",
+    client: "Mr.Vimukthi Manmperi",
   },
   {
     id: 2,
-    title: "Corporate Website",
+    title: "Vacanza in Ceylon – Luxury Travel Website",
     description:
-      "Professional corporate website with CMS integration and responsive design for better user experience.",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      "A modern, multilingual travel platform designed for Italian tourists exploring Sri Lanka. Features include curated tour packages, immersive visuals, mobile-friendly UI, and SEO-optimized structure for maximum reach and conversions..",
+    image: VacanzaImg,
     category: "Website Development",
-    tags: ["WordPress", "PHP", "MySQL", "CSS3"],
-    demoUrl: "https://demo-corporate.com",
-    githubUrl: "https://github.com/example/corporate",
-    date: "2024-02-20",
-    client: "Business Corp",
+    tags: [],
+    demoUrl: "https://www.vacanzainceylon.com/",
+    githubUrl: "",
+    date: "2024-10-17",
+    client: "Mr.Sampath Liyanage",
+  },
+  {
+    id: 3,
+    title: "Rubi.lk – E‑Commerce Website",
+    description:
+      "A sleek and responsive online store for electronics in Sri Lanka, featuring fast delivery, secure payments, and an easy shopping experience focused on tech and entertainment products.",
+    image: RubiImg,
+
+    category: "Website Development",
+    tags: [],
+    demoUrl: "https://rubistore.lk/",
+    githubUrl: "",
+    date: "2025-06-10",
+    client: "Mr.Ruwan Pathirana",
+  },
+  {
+    id: 4,
+    title: "Ruhunu Prime Lands – Real Estate Development Website",
+    description:
+      "A polished and professional real estate platform enabling Sri Lankan land seekers to explore residential and investment plots across 18+ districts. Features include clean UI, property filters, transparent pricing per perch, project showcases, and contact integration with Prime Lands’ trusted brand and national reach.",
+    image: RuhunuImg,
+
+    category: "Website Development",
+    tags: [],
+    demoUrl: "https://ruhunuprimelands.com/",
+    githubUrl: "",
+    date: "2025-07-20",
+    client: "Mr.Thishan Poththewela",
+  },
+  {
+    id: 5,
+    title: "Visa‑LK.com – Sri Lanka Visa Application Platform",
+    description:
+      "A clean, responsive portal guiding global travelers through Sri Lanka’s visa options—tourist, business, or transit. Features include straightforward application flow, multilingual support, secure payment integration, and clear eligibility criteria.",
+    image: VisaImg,
+
+    category: "Website Development",
+    tags: [],
+    demoUrl: "https://visa-lk.com/",
+    githubUrl: "",
+    date: "2025-07-20",
+    client: "Mr.Thishan Poththewela",
+  },
+  {
+    id: 6,
+    title: "Lucian Bungalow – Nuwara Eliya Boutique Villa Website",
+    description:
+      "A serene and visually rich website promoting a charming highland retreat in Nuwara Eliya. The platform showcases garden-view villa accommodations, cozy room types, and local experiences. Features clean mobile-first design, gallery-driven storytelling, smooth booking prompts, and key property details like amenities (free Wi‑Fi, parking, terrace) and location context near Gregory Lake.",
+    image: LucianImg,
+
+    category: "Website Development",
+    tags: [],
+    demoUrl: "https://lucianbungalow.com/",
+    githubUrl: "",
+    date: "2025-05-14",
+    client: "Ruhunu Trust & Credit (Pvt) Ltd",
   },
 
   // SEO Development
-  {
-    id: 3,
-    title: "SEO Analytics Dashboard",
-    description:
-      "Comprehensive SEO tracking and analytics platform with keyword monitoring and ranking analysis.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    category: "SEO Development",
-    tags: ["React", "Python", "Google Analytics", "SEMrush API"],
-    demoUrl: "https://demo-seo.com",
-    githubUrl: "https://github.com/example/seo-dashboard",
-    date: "2024-01-10",
-    client: "Digital Agency",
-  },
+  // {
+  //   id: 3,
+  //   title: "SEO Analytics Dashboard",
+  //   description:
+  //     "Comprehensive SEO tracking and analytics platform with keyword monitoring and ranking analysis.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+  //   category: "SEO Development",
+  //   tags: ["React", "Python", "Google Analytics", "SEMrush API"],
+  //   demoUrl: "https://demo-seo.com",
+  //   githubUrl: "https://github.com/example/seo-dashboard",
+  //   date: "2024-01-10",
+  //   client: "Digital Agency",
+  // },
 
   // Digital Marketing
-  {
-    id: 4,
-    title: "Social Media Campaign",
-    description:
-      "Multi-platform digital marketing campaign with automated posting and engagement tracking.",
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-    category: "Digital Marketing",
-    tags: ["Facebook Ads", "Instagram", "Analytics", "Automation"],
-    demoUrl: "https://demo-campaign.com",
-    githubUrl: "#",
-    date: "2024-03-01",
-    client: "Fashion Brand",
-  },
+  // {
+  //   id: 4,
+  //   title: "Social Media Campaign",
+  //   description:
+  //     "Multi-platform digital marketing campaign with automated posting and engagement tracking.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+  //   category: "Digital Marketing",
+  //   tags: ["Facebook Ads", "Instagram", "Analytics", "Automation"],
+  //   demoUrl: "https://demo-campaign.com",
+  //   githubUrl: "#",
+  //   date: "2024-03-01",
+  //   client: "Fashion Brand",
+  // },
 
   // Email Marketing
-  {
-    id: 5,
-    title: "Email Automation System",
-    description:
-      "Advanced email marketing automation with personalization and A/B testing capabilities.",
-    image:
-      "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop",
-    category: "Email Marketing",
-    tags: ["Mailchimp", "Automation", "Analytics", "Personalization"],
-    demoUrl: "https://demo-email.com",
-    githubUrl: "#",
-    date: "2024-02-15",
-    client: "E-commerce Store",
-  },
+  // {
+  //   id: 5,
+  //   title: "Email Automation System",
+  //   description:
+  //     "Advanced email marketing automation with personalization and A/B testing capabilities.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop",
+  //   category: "Email Marketing",
+  //   tags: ["Mailchimp", "Automation", "Analytics", "Personalization"],
+  //   demoUrl: "https://demo-email.com",
+  //   githubUrl: "#",
+  //   date: "2024-02-15",
+  //   client: "E-commerce Store",
+  // },
 
   // Event Planning
-  {
-    id: 6,
-    title: "Event Management Platform",
-    description:
-      "Complete event planning and management system with booking, payments, and attendee tracking.",
-    image:
-      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop",
-    category: "Event Planning",
-    tags: ["Event Management", "Booking System", "Payments", "CRM"],
-    demoUrl: "https://demo-events.com",
-    githubUrl: "https://github.com/example/events",
-    date: "2024-01-25",
-    client: "Event Company",
-  },
+  // {
+  //   id: 6,
+  //   title: "Event Management Platform",
+  //   description:
+  //     "Complete event planning and management system with booking, payments, and attendee tracking.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&h=400&fit=crop",
+  //   category: "Event Planning",
+  //   tags: ["Event Management", "Booking System", "Payments", "CRM"],
+  //   demoUrl: "https://demo-events.com",
+  //   githubUrl: "https://github.com/example/events",
+  //   date: "2024-01-25",
+  //   client: "Event Company",
+  // },
 
   // Software Development
-  {
-    id: 7,
-    title: "Mobile Banking App",
-    description:
-      "Secure mobile banking application with biometric authentication and real-time transactions.",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
-    category: "Software And Mobile Application Development",
-    tags: ["React Native", "Node.js", "MongoDB", "Security"],
-    demoUrl: "https://demo-banking.com",
-    githubUrl: "https://github.com/example/banking-app",
-    date: "2024-03-10",
-    client: "Financial Institution",
-  },
+  // {
+  //   id: 7,
+  //   title: "Mobile Banking App",
+  //   description:
+  //     "Secure mobile banking application with biometric authentication and real-time transactions.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
+  //   category: "Software And Mobile Application Development",
+  //   tags: ["React Native", "Node.js", "MongoDB", "Security"],
+  //   demoUrl: "https://demo-banking.com",
+  //   githubUrl: "https://github.com/example/banking-app",
+  //   date: "2024-03-10",
+  //   client: "Financial Institution",
+  // },
 
   // Business Consultant
-  {
-    id: 8,
-    title: "Business Strategy Report",
-    description:
-      "Comprehensive business analysis and strategic planning consultation for market expansion.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
-    category: "Business Consultant",
-    tags: ["Strategy", "Analysis", "Planning", "Consulting"],
-    demoUrl: "#",
-    githubUrl: "#",
-    date: "2024-02-28",
-    client: "Startup Company",
-  },
+  // {
+  //   id: 8,
+  //   title: "Business Strategy Report",
+  //   description:
+  //     "Comprehensive business analysis and strategic planning consultation for market expansion.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+  //   category: "Business Consultant",
+  //   tags: ["Strategy", "Analysis", "Planning", "Consulting"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  //   date: "2024-02-28",
+  //   client: "Startup Company",
+  // },
 
   // Photography
-  {
-    id: 9,
-    title: "Product Photography Portfolio",
-    description:
-      "Professional product photography and videography for e-commerce and marketing campaigns.",
-    image:
-      "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&h=400&fit=crop",
-    category: "Photography and Videography",
-    tags: ["Photography", "Product Shots", "Editing", "Commercial"],
-    demoUrl: "https://demo-photography.com",
-    githubUrl: "#",
-    date: "2024-03-05",
-    client: "Retail Brand",
-  },
+  // {
+  //   id: 9,
+  //   title: "Product Photography Portfolio",
+  //   description:
+  //     "Professional product photography and videography for e-commerce and marketing campaigns.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?w=600&h=400&fit=crop",
+  //   category: "Photography and Videography",
+  //   tags: ["Photography", "Product Shots", "Editing", "Commercial"],
+  //   demoUrl: "https://demo-photography.com",
+  //   githubUrl: "#",
+  //   date: "2024-03-05",
+  //   client: "Retail Brand",
+  // },
 
   // Content Writing
-  {
-    id: 10,
-    title: "Blog Content Strategy",
-    description:
-      "Comprehensive content writing and SEO optimization for increased organic traffic and engagement.",
-    image:
-      "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop",
-    category: "Content Writing",
-    tags: ["SEO Writing", "Blog Posts", "Content Strategy", "Research"],
-    demoUrl: "#",
-    githubUrl: "#",
-    date: "2024-02-10",
-    client: "Tech Blog",
-  },
+  // {
+  //   id: 10,
+  //   title: "Blog Content Strategy",
+  //   description:
+  //     "Comprehensive content writing and SEO optimization for increased organic traffic and engagement.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop",
+  //   category: "Content Writing",
+  //   tags: ["SEO Writing", "Blog Posts", "Content Strategy", "Research"],
+  //   demoUrl: "#",
+  //   githubUrl: "#",
+  //   date: "2024-02-10",
+  //   client: "Tech Blog",
+  // },
 
   // AI Video Creation
-  {
-    id: 11,
-    title: "AI-Generated Marketing Videos",
-    description:
-      "Automated video creation using AI tools for marketing campaigns and social media content.",
-    image:
-      "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600&h=400&fit=crop",
-    category: "AI Video Creations",
-    tags: ["AI", "Video Generation", "Marketing", "Automation"],
-    demoUrl: "https://demo-ai-video.com",
-    githubUrl: "#",
-    date: "2024-03-12",
-    client: "Marketing Agency",
-  },
+  // {
+  //   id: 11,
+  //   title: "AI-Generated Marketing Videos",
+  //   description:
+  //     "Automated video creation using AI tools for marketing campaigns and social media content.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600&h=400&fit=crop",
+  //   category: "AI Video Creations",
+  //   tags: ["AI", "Video Generation", "Marketing", "Automation"],
+  //   demoUrl: "https://demo-ai-video.com",
+  //   githubUrl: "#",
+  //   date: "2024-03-12",
+  //   client: "Marketing Agency",
+  // },
 
   // Logo Design
-  {
-    id: 12,
-    title: "Brand Identity Package",
-    description:
-      "Complete brand identity design including logo, color palette, typography, and brand guidelines.",
-    image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    category: "Logo Design",
-    tags: ["Branding", "Logo Design", "Identity", "Guidelines"],
-    demoUrl: "https://demo-branding.com",
-    githubUrl: "#",
-    date: "2024-01-30",
-    client: "Startup Brand",
-  },
+  // {
+  //   id: 12,
+  //   title: "Brand Identity Package",
+  //   description:
+  //     "Complete brand identity design including logo, color palette, typography, and brand guidelines.",
+  //   image:
+  //     "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+  //   category: "Logo Design",
+  //   tags: ["Branding", "Logo Design", "Identity", "Guidelines"],
+  //   demoUrl: "https://demo-branding.com",
+  //   githubUrl: "#",
+  //   date: "2024-01-30",
+  //   client: "Startup Brand",
+  // },
 ];
 
 const ProjectPage = () => {
@@ -489,14 +550,6 @@ const ProjectPage = () => {
                         </motion.a>
                       )}
                     </div>
-
-                    <motion.button
-                      className="px-4 py-2 bg-primary text-white text-sm rounded-lg hover:bg-primary/90 transition-colors"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      View Details
-                    </motion.button>
                   </div>
                 </div>
               </motion.div>
