@@ -113,19 +113,19 @@ export const HeroSection = () => {
             className="space-y-8 text-center lg:text-left"
           >
             <motion.div variants={titleVariants} className="space-y-4">
-              <motion.div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
+              <motion.div className="flex items-center justify-center lg:justify-start gap-2 mb-4 mt-15">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
                   <Sparkles className="h-6 w-6 text-blue-400" />
                 </motion.div>
-                <span className="text-blue-400 font-semibold tracking-wide uppercase text-sm">
+                <span className="text-blue-400 font-semibold tracking-wide uppercase text-md  text-2xl">
                   Digital Innovation
                 </span>
               </motion.div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight dark:text-[#043b4f]">
+              {/* <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-tight dark:text-[#043b4f]">
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -142,7 +142,7 @@ export const HeroSection = () => {
                 >
                   ARCS
                 </motion.span>
-              </h1>
+              </h1> */}
             </motion.div>
 
             <motion.p
