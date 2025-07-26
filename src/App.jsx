@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Layout from "./components/Layout";
 import { useEffect } from "react";
 import { ScrollToTop } from "./components/ScrollToTop";
+import ProjectPage from "./pages/ProjectPage";
 // Scroll to element by hash (e.g., #about)
 function ScrollToHashElement() {
   const location = useLocation();
@@ -36,6 +37,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<ProjectPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
