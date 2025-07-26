@@ -23,6 +23,8 @@ import {
   Star,
   ArrowRight,
   ChevronDown,
+  DollarSign,
+  Clock,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
@@ -113,11 +115,51 @@ const services = [
   },
 ];
 
+const budgetOptions = [
+  {
+    id: "under-1k",
+    name: "Under $1,000",
+    description: "Small projects & quick fixes",
+  },
+  {
+    id: "1k-5k",
+    name: "$1,000 - $5,000",
+    description: "Small to medium projects",
+  },
+  {
+    id: "5k-10k",
+    name: "$5,000 - $10,000",
+    description: "Medium scale projects",
+  },
+  {
+    id: "10k-25k",
+    name: "$10,000 - $25,000",
+    description: "Large scale projects",
+  },
+  {
+    id: "25k-plus",
+    name: "$25,000+",
+    description: "Enterprise level projects",
+  },
+];
+
+const timelineOptions = [
+  { id: "asap", name: "ASAP", description: "Urgent delivery needed" },
+  { id: "1-month", name: "Within 1 Month", description: "Quick turnaround" },
+  { id: "2-3-months", name: "2-3 Months", description: "Standard timeline" },
+  { id: "3-6-months", name: "3-6 Months", description: "Flexible timeline" },
+  { id: "6-plus-months", name: "6+ Months", description: "Long-term project" },
+];
+
 export default function ContactSection() {
   const [selectedServices, setSelectedServices] = useState([]);
+  const [selectedBudget, setSelectedBudget] = useState("");
+  const [selectedTimeline, setSelectedTimeline] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isBudgetDropdownOpen, setIsBudgetDropdownOpen] = useState(false);
+  const [isTimelineDropdownOpen, setIsTimelineDropdownOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -131,6 +173,8 @@ export default function ContactSection() {
   const formRef = useRef();
   const sectionRef = useRef();
   const dropdownRef = useRef();
+  const budgetDropdownRef = useRef();
+  const timelineDropdownRef = useRef();
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   // Initialize EmailJS (replace with your actual credentials)
@@ -144,6 +188,18 @@ export default function ContactSection() {
         ? prev.filter((id) => id !== serviceId)
         : [...prev, serviceId]
     );
+  };
+
+  const handleBudgetSelect = (budgetId) => {
+    setSelectedBudget(budgetId);
+    setFormData({ ...formData, budget: budgetId });
+    setIsBudgetDropdownOpen(false);
+  };
+
+  const handleTimelineSelect = (timelineId) => {
+    setSelectedTimeline(timelineId);
+    setFormData({ ...formData, timeline: timelineId });
+    setIsTimelineDropdownOpen(false);
   };
 
   const handleInputChange = (e) => {
@@ -193,6 +249,8 @@ export default function ContactSection() {
         timeline: "",
       });
       setSelectedServices([]);
+      setSelectedBudget("");
+      setSelectedTimeline("");
     } catch (error) {
       console.error("EmailJS error:", error);
       setSubmitStatus("error");
@@ -201,11 +259,23 @@ export default function ContactSection() {
     }
   };
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   React.useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
+      }
+      if (
+        budgetDropdownRef.current &&
+        !budgetDropdownRef.current.contains(event.target)
+      ) {
+        setIsBudgetDropdownOpen(false);
+      }
+      if (
+        timelineDropdownRef.current &&
+        !timelineDropdownRef.current.contains(event.target)
+      ) {
+        setIsTimelineDropdownOpen(false);
       }
     };
 
@@ -317,7 +387,7 @@ export default function ContactSection() {
                   whileHover={{ y: -5 }}
                   className="flex flex-col items-center text-center group"
                 >
-                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white group-hover:shadow-lg transition-shadow mb-4">
+                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-[#043b4f] text-white group-hover:shadow-lg transition-shadow mb-4">
                     <Icon className="h-8 w-8" />
                   </div>
                   <h4 className="font-semibold text-gray-800 dark:text-white mb-2">
@@ -586,50 +656,180 @@ export default function ContactSection() {
                 )}
               </div>
 
+              {/* Budget Dropdown */}
               <div>
-                <label
-                  htmlFor="budget"
-                  className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
-                >
+                <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                   Project Budget
                 </label>
-                <select
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200/50 dark:border-gray-600/50 bg-white/20 dark:bg-gray-700/20 backdrop-blur-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                >
-                  <option value="">Select Budget Range</option>
-                  <option value="under-1k">Under $1,000</option>
-                  <option value="1k-5k">$1,000 - $5,000</option>
-                  <option value="5k-10k">$5,000 - $10,000</option>
-                  <option value="10k-25k">$10,000 - $25,000</option>
-                  <option value="25k-plus">$25,000+</option>
-                </select>
+                <div className="relative" ref={budgetDropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setIsBudgetDropdownOpen(!isBudgetDropdownOpen)
+                    }
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200/50 dark:border-gray-600/50 bg-white/20 dark:bg-gray-700/20 backdrop-blur-sm text-left text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all flex items-center justify-between"
+                  >
+                    <span
+                      className={
+                        selectedBudget
+                          ? "text-gray-900 dark:text-white"
+                          : "text-gray-500"
+                      }
+                    >
+                      {selectedBudget
+                        ? budgetOptions.find((b) => b.id === selectedBudget)
+                            ?.name
+                        : "Select Budget Range"}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform ${
+                        isBudgetDropdownOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {isBudgetDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute z-50 w-full mt-2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-600/50 rounded-lg shadow-lg max-h-64 overflow-y-auto"
+                    >
+                      {budgetOptions.map((budget) => {
+                        const isSelected = selectedBudget === budget.id;
+
+                        return (
+                          <div
+                            key={budget.id}
+                            onClick={() => handleBudgetSelect(budget.id)}
+                            className={`flex items-center gap-3 p-3 cursor-pointer transition-colors hover:bg-gray-50/50 dark:hover:bg-gray-600/50 ${
+                              isSelected
+                                ? "bg-blue-50/50 dark:bg-blue-900/20"
+                                : ""
+                            }`}
+                          >
+                            <div
+                              className={`p-2 rounded-lg ${
+                                isSelected
+                                  ? "bg-blue-500 text-white"
+                                  : "bg-gray-100/50 dark:bg-gray-600/50 text-gray-600 dark:text-gray-400"
+                              }`}
+                            >
+                              <DollarSign className="w-4 h-4" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2">
+                                <span
+                                  className={`font-medium text-sm ${
+                                    isSelected
+                                      ? "text-blue-700 dark:text-blue-300"
+                                      : "text-gray-900 dark:text-white"
+                                  }`}
+                                >
+                                  {budget.name}
+                                </span>
+                                {isSelected && (
+                                  <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                                )}
+                              </div>
+                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                {budget.description}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+                </div>
               </div>
 
+              {/* Timeline Dropdown */}
               <div>
-                <label
-                  htmlFor="timeline"
-                  className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
-                >
+                <label className="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">
                   Project Timeline
                 </label>
-                <select
-                  id="timeline"
-                  name="timeline"
-                  value={formData.timeline}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-200/50 dark:border-gray-600/50 bg-white/20 dark:bg-gray-700/20 backdrop-blur-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                >
-                  <option value="">Select Timeline</option>
-                  <option value="asap">ASAP</option>
-                  <option value="1-month">Within 1 Month</option>
-                  <option value="2-3-months">2-3 Months</option>
-                  <option value="3-6-months">3-6 Months</option>
-                  <option value="6-plus-months">6+ Months</option>
-                </select>
+                <div className="relative" ref={timelineDropdownRef}>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setIsTimelineDropdownOpen(!isTimelineDropdownOpen)
+                    }
+                    className="w-full px-4 py-3 rounded-lg border border-gray-200/50 dark:border-gray-600/50 bg-white/20 dark:bg-gray-700/20 backdrop-blur-sm text-left text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all flex items-center justify-between"
+                  >
+                    <span
+                      className={
+                        selectedTimeline
+                          ? "text-gray-900 dark:text-white"
+                          : "text-gray-500"
+                      }
+                    >
+                      {selectedTimeline
+                        ? timelineOptions.find((t) => t.id === selectedTimeline)
+                            ?.name
+                        : "Select Timeline"}
+                    </span>
+                    <ChevronDown
+                      className={`w-5 h-5 transition-transform ${
+                        isTimelineDropdownOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {isTimelineDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute z-50 w-full mt-2 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm border border-gray-200/50 dark:border-gray-600/50 rounded-lg shadow-lg max-h-64 overflow-y-auto"
+                    >
+                      {timelineOptions.map((timeline) => {
+                        const isSelected = selectedTimeline === timeline.id;
+
+                        return (
+                          <div
+                            key={timeline.id}
+                            onClick={() => handleTimelineSelect(timeline.id)}
+                            className={`flex items-center gap-3 p-3 cursor-pointer transition-colors hover:bg-gray-50/50 dark:hover:bg-gray-600/50 ${
+                              isSelected
+                                ? "bg-blue-50/50 dark:bg-blue-900/20"
+                                : ""
+                            }`}
+                          >
+                            <div
+                              className={`p-2 rounded-lg ${
+                                isSelected
+                                  ? "bg-blue-500 text-white"
+                                  : "bg-gray-100/50 dark:bg-gray-600/50 text-gray-600 dark:text-gray-400"
+                              }`}
+                            >
+                              <Clock className="w-4 h-4" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center gap-2">
+                                <span
+                                  className={`font-medium text-sm ${
+                                    isSelected
+                                      ? "text-blue-700 dark:text-blue-300"
+                                      : "text-gray-900 dark:text-white"
+                                  }`}
+                                >
+                                  {timeline.name}
+                                </span>
+                                {isSelected && (
+                                  <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                                )}
+                              </div>
+                              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                {timeline.description}
+                              </p>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </motion.div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -680,7 +880,7 @@ export default function ContactSection() {
               disabled={isSubmitting || selectedServices.length === 0}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="w-full bg-gradient-to-r from-blue-600 to-[#043b4f] hover:from-blue-700 hover:to-[purple-700] text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {isSubmitting ? (
                 <>
