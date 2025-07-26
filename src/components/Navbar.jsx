@@ -3,13 +3,20 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import LogoImg from "../../public/logo.png";
+import {
+  House,
+  BadgeInfo,
+  BriefcaseBusiness,
+  FolderOpenDot,
+  Contact,
+} from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "#hero", icon: "🏠" },
-  { name: "About", href: "#about", icon: "👋" },
-  { name: "Packages", href: "#packages", icon: "📦" },
-  { name: "Projects", href: "#projects", icon: "🚀" },
-  { name: "Contact", href: "#contact", icon: "💬" },
+  { name: "Home", href: "#hero", icon: <House /> },
+  { name: "About", href: "#about", icon: <BadgeInfo /> },
+  { name: "Services ", href: "#packages", icon: <BriefcaseBusiness /> },
+  { name: "Projects", href: "#projects", icon: <FolderOpenDot /> },
+  { name: "Contact", href: "#contact", icon: <Contact /> },
 ];
 
 const cn = (...classes) => {
