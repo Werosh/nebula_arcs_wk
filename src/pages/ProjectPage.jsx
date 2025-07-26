@@ -125,7 +125,7 @@ const projects = [
 
   {
     id: 9,
-    title: "Chathu Rathnayaka Photography",
+    title: "In frame - Chathu Rathnayaka",
     description:
       "A heartfelt photo session capturing the pride, resilience, and achievement of newly graduated nurses. This shoot blends elegance with emotion—featuring crisp white uniforms, graduation gowns, stethoscopes, and natural smiles that reflect years of hard work and compassion. Set in serene outdoor backdrops or clean studio light, every frame tells a story of dedication, care, and a future ready to heal the world.",
     image:
@@ -139,7 +139,7 @@ const projects = [
   },
   {
     id: 10,
-    title: "Umesha Sidangana  Birth Day Photography",
+    title: "In Frame - Umesha Sidangana  Birth Day",
     description:
       "A joyful and elegant birthday shoot capturing the personality and celebration of Umesha Sidangana’s special day. This session blends candid smiles, posed portraits, and detail shots of décor, cake, and style—framed with natural lighting and soft tones to create timeless memories full of charm and warmth.",
     image:
