@@ -1,252 +1,253 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import ImgO1 from "../assets/images/pckg_01.webp";
 import ImgO2 from "../assets/images/pckg_02.webp";
 import ImgO3 from "../assets/images/pckg_03.webp";
 import ImgO4 from "../assets/images/pckg_04.webp";
 
-const packages = [
-  {
-    name: "Website Development",
-    description:
-      "Custom websites built with modern technologies for optimal performance and user experience",
-    icon: "💻",
-  },
-  {
-    name: "SEO Development",
-    description:
-      "Optimize your online presence and boost search engine rankings effectively",
-    icon: "🔍",
-  },
-  {
-    name: "Digital Marketing",
-    description:
-      "Comprehensive digital marketing strategies to grow your business online",
-    icon: "📈",
-  },
-  {
-    name: "Email Marketing",
-    description:
-      "Targeted email campaigns that engage your audience and drive conversions",
-    icon: "📧",
-  },
-  {
-    name: "Event Planning",
-    description: "Professional event management from concept to execution",
-    icon: "🎉",
-  },
-  {
-    name: "Software & Mobile App Development",
-    description:
-      "Custom software solutions and mobile applications for your business needs",
-    icon: "📱",
-  },
-  {
-    name: "Business Consultant",
-    description:
-      "Strategic business consulting to optimize operations and drive growth",
-    icon: "💼",
-  },
-  {
-    name: "Photography & Videography",
-    description:
-      "Professional visual content creation for events, products, and marketing",
-    icon: "📸",
-  },
-  {
-    name: "Content Writing",
-    description:
-      "High-quality written content that resonates with your target audience",
-    icon: "✍️",
-  },
-  {
-    name: "Content Creation",
-    description: "Engaging multimedia content across all digital platforms",
-    icon: "🎨",
-  },
-  {
-    name: "AI Video Creation",
-    description: "Cutting-edge AI-powered video content generation and editing",
-    icon: "🤖",
-  },
-  {
-    name: "Short Video Creation",
-    description:
-      "Dynamic short-form videos optimized for social media platforms",
-    icon: "🎬",
-  },
-  {
-    name: "Content Planning & Copywriting",
-    description:
-      "Strategic content planning and persuasive copywriting services",
-    icon: "📝",
-  },
-  {
-    name: "Logo Design",
-    description: "Professional logo design and brand identity development",
-    icon: "🎯",
-  },
-];
-
 // Array of image URLs for the hero section
 const heroImages = [ImgO1, ImgO2, ImgO3, ImgO4];
 
 export const PackagesSection = () => {
+  const ref = useRef(null);
+  const navigate = useNavigate();
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.08,
+        duration: 0.8,
+        staggerChildren: 0.2,
       },
     },
   };
 
-  const cardVariants = {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.8, rotateY: -15 },
+    visible: (index) => ({
+      opacity: 1,
+      scale: 1,
+      rotateY: 0,
+      transition: {
+        duration: 0.6,
+        delay: index * 0.15,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const buttonVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
+        delay: 0.8,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    tap: {
+      scale: 0.95,
+      transition: {
+        duration: 0.1,
       },
     },
   };
 
   return (
-    <div id="packages" className="min-h-screen ">
+    <div id="packages">
       {/* Hero Section */}
       <motion.section
+        ref={ref}
         className="py-20 px-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
       >
         <div className="container mx-auto max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
-            >
+            <motion.div variants={itemVariants} className="space-y-6">
               <motion.h1
                 className="text-4xl md:text-5xl font-bold leading-tight text-[#043b4f]"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                variants={itemVariants}
               >
                 Our Professional
                 <span className="text-blue-600 block">Services</span>
               </motion.h1>
 
               <motion.p
-                className="text-gray-600 text-lg leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                className="text-gray-500 text-lg leading-relaxed"
+                variants={itemVariants}
               >
                 We provide comprehensive solutions to help your business thrive
                 in the digital landscape. From development to marketing, our
                 expert team delivers quality results.
               </motion.p>
+
+              {/* View Services Button - REDESIGNED */}
+              <motion.div
+                variants={buttonVariants}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"}
+                whileHover="hover"
+                whileTap="tap"
+              >
+                <motion.button
+                  className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-bold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl border border-blue-500/20 backdrop-blur-sm flex items-center gap-4 cursor-pointer group transition-all duration-300"
+                  onClick={() => {
+                    navigate("/services");
+                  }}
+                  whileHover={{
+                    boxShadow: "0 20px 40px rgba(59, 130, 246, 0.4)",
+                    y: -2,
+                  }}
+                >
+                  {/* Animated background glow */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-600/20 rounded-2xl"
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileHover={{
+                      scale: 1,
+                      opacity: 1,
+                      transition: { duration: 0.3 },
+                    }}
+                  />
+
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                    animate={{
+                      translateX: ["100%", "-100%"],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+
+                  <span className="relative z-10 text-lg">View Services</span>
+
+                  <motion.div
+                    className="relative z-10 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+                    whileHover={{
+                      rotate: 360,
+                      scale: 1.2,
+                      transition: { duration: 0.5 },
+                    }}
+                  >
+                    <motion.svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      initial={{ x: 0 }}
+                      whileHover={{ x: 3 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </motion.svg>
+                  </motion.div>
+                </motion.button>
+              </motion.div>
             </motion.div>
 
             {/* Right Illustration */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative"
-            >
-              <div className="relative bg-gradient-to-br from-blue-900/15 to-[#043b4f] rounded-3xl p-8">
+            <motion.div variants={itemVariants} className="relative">
+              <motion.div
+                className="relative bg-gradient-to-br from-blue-900/15 to-[#043b4f] rounded-3xl p-8"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
                 <div className="grid grid-cols-2 gap-4">
                   {heroImages.map((imageUrl, index) => (
                     <motion.div
                       key={index}
-                      className="bg-white/20 backdrop-blur-sm rounded-xl   text-center"
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{
-                        duration: 0.5,
-                        delay: 0.8 + index * 0.15,
+                      className="bg-white/20 backdrop-blur-sm rounded-xl text-center overflow-hidden"
+                      custom={index}
+                      variants={imageVariants}
+                      initial="hidden"
+                      animate={isInView ? "visible" : "hidden"}
+                      whileHover={{
+                        scale: 1.05,
+                        rotateY: 5,
+                        transition: { duration: 0.3 },
                       }}
-                      whileHover={{ scale: 1.05 }}
                     >
-                      <img
+                      <motion.img
                         src={imageUrl}
                         alt={`Service ${index + 1}`}
-                        className=" mx-auto rounded-lg object-cover"
+                        className="mx-auto rounded-lg object-cover w-full h-full"
+                        whileHover={{
+                          scale: 1.1,
+                          transition: { duration: 0.3 },
+                        }}
                       />
                     </motion.div>
                   ))}
                 </div>
-              </div>
+
+                {/* Floating Animation Elements */}
+                <motion.div
+                  className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/30 rounded-full"
+                  animate={{
+                    y: [0, -10, 0],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <motion.div
+                  className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-300/40 rounded-full"
+                  animate={{
+                    y: [0, 10, 0],
+                    scale: [1, 0.9, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                />
+              </motion.div>
             </motion.div>
           </div>
         </div>
       </motion.section>
-
-      {/* Services Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#043b4f]">
-              What We <span className="text-blue-600">Offer</span>
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Explore our range of professional services designed to meet your
-              business needs
-            </p>
-          </motion.div>
-
-          {/* Services Grid */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {packages.map((pkg, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                className="bg-gray-300/10 border-2 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
-                whileHover={{
-                  y: -5,
-                  transition: { duration: 0.3 },
-                }}
-              >
-                <div className="flex items-start space-x-4">
-                  <motion.div
-                    className="text-3xl flex-shrink-0"
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {pkg.icon}
-                  </motion.div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2 text-gray-100 group-hover:text-blue-600 transition-colors duration-300">
-                      {pkg.name}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {pkg.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
