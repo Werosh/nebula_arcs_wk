@@ -180,7 +180,7 @@ export const HeroSection = () => {
                 href="#about"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-gray-600 text-gray-300 font-semibold rounded-full hover:border-blue-400 hover:text-blue-400 transition-all duration-300 flex items-center gap-2 justify-center dark:text-gray-700"
+                className="px-8 py-4 border-2 border-gray-100 text-gray-100 font-semibold rounded-full hover:border-blue-400 hover:text-blue-400 transition-all duration-300 flex items-center gap-2 justify-center dark:text-gray-100"
               >
                 <Globe className="h-5 w-5" />
                 Learn More

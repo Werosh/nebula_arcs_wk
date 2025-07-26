@@ -65,7 +65,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Rubi.lk – E‑Commerce Website",
+    title: "Rubi Store.lk – E‑Commerce Website",
     description:
       "A sleek and responsive online store for electronics in Sri Lanka, featuring fast delivery, secure payments, and an easy shopping experience focused on tech and entertainment products.",
     image: RubiImg,
