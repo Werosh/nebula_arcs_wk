@@ -47,7 +47,6 @@ const projects = [
     category: "Website Development",
     tags: [],
     demoUrl: "https://flareupclothing.com/",
-    githubUrl: "",
     date: "2024-08-12",
     client: "Mr.Vimukthi Manmperi",
   },
@@ -60,23 +59,8 @@ const projects = [
     category: "Website Development",
     tags: [],
     demoUrl: "https://www.vacanzainceylon.com/",
-    githubUrl: "",
     date: "2024-10-17",
     client: "Mr.Sampath Liyanage",
-  },
-  {
-    id: 3,
-    title: "Rubi Store.lk – E‑Commerce Website",
-    description:
-      "A sleek and responsive online store for electronics in Sri Lanka, featuring fast delivery, secure payments, and an easy shopping experience focused on tech and entertainment products.",
-    image: RubiImg,
-
-    category: "Website Development",
-    tags: [],
-    demoUrl: "https://rubistore.lk/",
-    githubUrl: "",
-    date: "2025-06-10",
-    client: "Mr.Ruwan Pathirana",
   },
   {
     id: 4,
@@ -88,10 +72,23 @@ const projects = [
     category: "Website Development",
     tags: [],
     demoUrl: "https://ruhunuprimelands.com/",
-    githubUrl: "",
     date: "2025-07-20",
     client: "Mr.Thishan Poththewela",
   },
+  {
+    id: 3,
+    title: "Rubi Store.lk – E‑Commerce Website",
+    description:
+      "A sleek and responsive online store for electronics in Sri Lanka, featuring fast delivery, secure payments, and an easy shopping experience focused on tech and entertainment products.",
+    image: RubiImg,
+
+    category: "Website Development",
+    tags: [],
+    demoUrl: "https://rubistore.lk/",
+    date: "2025-06-10",
+    client: "Mr.Ruwan Pathirana",
+  },
+
   {
     id: 5,
     title: "Visa‑LK.com – Sri Lanka Visa Application Platform",
@@ -102,7 +99,6 @@ const projects = [
     category: "Website Development",
     tags: [],
     demoUrl: "https://visa-lk.com/",
-    githubUrl: "",
     date: "2025-07-20",
     client: "Mr.Thishan Poththewela",
   },
@@ -116,7 +112,6 @@ const projects = [
     category: "Website Development",
     tags: [],
     demoUrl: "https://lucianbungalow.com/",
-    githubUrl: "",
     date: "2025-05-14",
     client: "Ruhunu Trust & Credit (Pvt) Ltd",
   },
@@ -247,7 +242,7 @@ const projects = [
   // Digital Marketing
 
   {
-    id: 4,
+    id: 16,
     title: "Vacanza in Ceylon – Digital Marketing Campaign",
     description:
       "A strategic digital marketing initiative designed to attract European travelers to Sri Lanka through targeted content, SEO, and social media engagement. The campaign highlights cultural tours, luxury stays, and authentic local experiences—driven by creative storytelling, performance tracking, and high-conversion design across platforms.",
@@ -261,7 +256,7 @@ const projects = [
     client: "Vacanza in Ceylon",
   },
   {
-    id: 4,
+    id: 17,
     title: "Flare Up Clothing – Digital Marketing Campaign",
     description:
       "A bold and trend-driven digital marketing campaign created to boost brand visibility and sales for Flare Up Clothing. Focused on youth fashion and streetwear culture, the strategy combined social media ads, influencer collaborations, and targeted content creation to amplify reach, drive engagement, and elevate the brand’s online identity.",
@@ -274,7 +269,6 @@ const projects = [
     date: "2024-10-05",
     client: "Flare Up Clothing",
   },
-
   // SEO Development
   // {
   //   id: 3,
@@ -394,15 +388,21 @@ const ProjectPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const filteredProjects = projects.filter((project) => {
+    const projectCategory = project.category?.trim().toLowerCase() || "";
+    const selectedCat = selectedCategory.trim().toLowerCase();
+
     const matchesCategory =
-      selectedCategory === "All Projects" ||
-      project.category === selectedCategory;
+      selectedCat === "all projects" || projectCategory === selectedCat;
+
+    const searchTermLower = searchTerm.toLowerCase();
+
     const matchesSearch =
-      project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.tags.some((tag) =>
-        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      project.title.toLowerCase().includes(searchTermLower) ||
+      project.description.toLowerCase().includes(searchTermLower) ||
+      (project.tags || []).some((tag) =>
+        tag.toLowerCase().includes(searchTermLower)
       );
+
     return matchesCategory && matchesSearch;
   });
 
@@ -521,7 +521,10 @@ const ProjectPage = () => {
                   {categories.map((category) => (
                     <motion.button
                       key={category}
-                      onClick={() => setSelectedCategory(category)}
+                      onClick={() => {
+                        setSelectedCategory(category);
+                        setIsFilterOpen(false);
+                      }}
                       className={`px-3 py-2 text-sm rounded-lg transition-all ${
                         selectedCategory === category
                           ? "bg-primary text-white"
