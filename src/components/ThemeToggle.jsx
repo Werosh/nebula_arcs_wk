@@ -16,7 +16,7 @@ export const ThemeToggle = () => {
       )}
       disabled
     >
-      <Moon className="h-6 w-6 text-blue-900" />
+      <Moon className="h-6 w-6 text-blue-900/0" />
     </button>
   );
 };
