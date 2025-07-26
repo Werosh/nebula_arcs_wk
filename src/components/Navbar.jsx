@@ -30,11 +30,17 @@ export const Navbar = () => {
     setIsMenuOpen(false);
 
     if (location.pathname !== "/") {
-      navigate(`/${href}`); // go to / then scroll
+      navigate(`/${href}`);
     } else {
+      // If already on "/", scroll manually and update the hash in the URL
       const el = document.querySelector(href);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
+
+        // Force URL to update hash
+        if (location.hash !== href) {
+          history.replaceState(null, "", href);
+        }
       }
     }
   };

@@ -5,7 +5,7 @@ import Services from "./pages/Services";
 import { Toaster } from "@/components/ui/toaster";
 import Layout from "./components/Layout";
 import { useEffect } from "react";
-
+import { ScrollToTop } from "./components/ScrollToTop";
 // Scroll to element by hash (e.g., #about)
 function ScrollToHashElement() {
   const location = useLocation();
@@ -30,6 +30,7 @@ function App() {
     <>
       <Toaster />
       <BrowserRouter>
+        <ScrollToTop />
         <ScrollToHashElement />
         <Layout>
           <Routes>
