@@ -8,10 +8,12 @@ import {
   Linkedin,
   Twitter,
   Instagram,
+  Facebook,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
 import LogoImg from "../../public/logo.png";
+import { a, div } from "motion/react-client";
 
 // Utility function for conditional classes
 const cn = (...classes) => {
@@ -19,24 +21,40 @@ const cn = (...classes) => {
 };
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Github, href: "https://github.com/nebulaarcs", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/company/nebulaarcs",
+    label: "LinkedIn",
+  },
+  { icon: Twitter, href: "https://twitter.com/nebulaarcs", label: "Twitter" },
+  {
+    icon: Instagram,
+    href: "https://instagram.com/nebulaarcs",
+    label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://web.facebook.com/people/Nebula-Arcs/61578835523898/",
+    label: "Facebook",
+  },
 ];
 
 const quickLinks = [
   { name: "Privacy Policy", href: "#privacy" },
   { name: "Terms of Service", href: "#terms" },
   { name: "Cookie Policy", href: "#cookies" },
-  { name: "Sitemap", href: "#sitemap" },
+  { name: "Support", href: "https://support.nebulaarcs.com" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 const services = [
-  { name: "Web Development", href: "#web-dev" },
-  { name: "Mobile Apps", href: "#mobile" },
-  { name: "UI/UX Design", href: "#design" },
-  { name: "Consulting", href: "#consulting" },
+  { name: "Website Development", href: "/services" },
+  { name: "SEO Development", href: "/services" },
+  { name: "Digital Marketing", href: "/services" },
+  { name: "Email Marketing", href: "/services" },
+  { name: "Event Planning", href: "/services" },
+  { name: "More...", href: "/services" },
 ];
 
 export default function Footer() {
@@ -78,6 +96,18 @@ export default function Footer() {
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
+    } else if (href.startsWith("http")) {
+      // External links - open in new tab
+      window.open(href, "_blank", "noopener,noreferrer");
+    } else {
+      // Internal routes - navigate normally
+      window.location.href = href;
+    }
+  };
+
+  const handleSocialClick = (href) => {
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -158,8 +188,7 @@ export default function Footer() {
                 </div>
 
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Crafting digital experiences that inspire and innovate. We
-                  transform ideas into stunning realities.
+                  Arcing Innovation Across the Digital Universe
                 </p>
 
                 <div className="space-y-3 text-sm text-gray-400">
@@ -257,7 +286,7 @@ export default function Footer() {
                     return (
                       <button
                         key={index}
-                        onClick={() => handleLinkClick(social.href)}
+                        onClick={() => handleSocialClick(social.href)}
                         className="p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-gray-400 hover:text-white hover:bg-[#043b4f]/20 hover:border-[#043b4f]/30 transition-all duration-300 hover:scale-110 group"
                         aria-label={social.label}
                       >
