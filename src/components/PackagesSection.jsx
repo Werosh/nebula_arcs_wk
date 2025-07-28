@@ -93,7 +93,7 @@ export const PackagesSection = () => {
             {/* Left Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.h1
-                className="text-4xl md:text-5xl mt-15 font-bold leading-tight text-[#043b4f]"
+                className="text-4xl md:text-5xl mt-15 font-bold leading-tight text-[#ffffff]"
                 variants={itemVariants}
               >
                 Our Professional
