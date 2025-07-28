@@ -139,7 +139,7 @@ export const AboutSection = () => {
               </h3>
 
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                At Nebula Arcs, we’re a team of creators, developers, and
+                At Nebula Arcs, we're a team of creators, developers, and
                 strategists who turn ideas into impactful digital experiences.
                 From websites to mobile apps, we blend design and technology to
                 build things that work beautifully and make a real difference.
@@ -149,7 +149,7 @@ export const AboutSection = () => {
                 We offer a wide range of services..including SEO, digital
                 marketing, content creation, AI video, and branding.All crafted
                 with passion and precision. Whether you're starting fresh or
-                scaling up, we’re here to help you grow, every step of the way.
+                scaling up, we're here to help you grow, every step of the way.
               </p>
             </motion.div>
 
@@ -182,6 +182,15 @@ export const AboutSection = () => {
                   Years Experience
                 </div>
               </div>
+            </motion.div>
+
+            {/* View Team Button */}
+            <motion.div variants={itemVariants} className="pt-6">
+              <a href="/team">
+                <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-purple-700">
+                  View Team
+                </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
