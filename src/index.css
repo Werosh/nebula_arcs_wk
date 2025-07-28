@@ -160,3 +160,23 @@
   padding: 0;
   text-align: center;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b; /* dark track color */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* blue thumb color */
+  border-radius: 10px;
+  border: 2px solid #1e293b; /* same as track color, for padding */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #1e293b;
+}
