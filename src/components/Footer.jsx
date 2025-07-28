@@ -21,16 +21,16 @@ const cn = (...classes) => {
 };
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/nebulaarcs", label: "GitHub" },
+  { icon: Github, href: "https://github.com", label: "GitHub" },
   {
     icon: Linkedin,
-    href: "https://linkedin.com/company/nebulaarcs",
+    href: "https://linkedin.com",
     label: "LinkedIn",
   },
-  { icon: Twitter, href: "https://twitter.com/nebulaarcs", label: "Twitter" },
+  // { icon: Twitter, href: "https://twitter.com/nebulaarcs", label: "Twitter" },
   {
     icon: Instagram,
-    href: "https://instagram.com/nebulaarcs",
+    href: "https://instagram.com",
     label: "Instagram",
   },
   {
@@ -44,7 +44,7 @@ const quickLinks = [
   { name: "Privacy Policy", href: "#privacy" },
   { name: "Terms of Service", href: "#terms" },
   { name: "Cookie Policy", href: "#cookies" },
-  { name: "Support", href: "https://support.nebulaarcs.com" },
+  { name: "Support", href: "#" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -97,7 +97,6 @@ export default function Footer() {
         element.scrollIntoView({ behavior: "smooth" });
       }
     } else if (href.startsWith("http")) {
-      // External links - open in new tab
       window.open(href, "_blank", "noopener,noreferrer");
     } else {
       // Internal routes - navigate normally
