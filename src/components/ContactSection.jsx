@@ -25,6 +25,7 @@ import {
   ChevronDown,
   DollarSign,
   Clock,
+  Facebook,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
@@ -177,7 +178,7 @@ export default function ContactSection() {
   const timelineDropdownRef = useRef();
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  // Initialize EmailJS (replace with your actual credentials)
+  // Initialize EmailJS
   const EMAILJS_SERVICE_ID = "service_x9fm5rw";
   const EMAILJS_TEMPLATE_ID = "template_h09hqt6";
   const EMAILJS_PUBLIC_KEY = "EzReJSUxpdt8P7ZqI";
@@ -418,9 +419,13 @@ export default function ContactSection() {
             </h4>
             <div className="flex justify-center space-x-4">
               {[
-                { icon: Linkedin, href: "#", color: "hover:text-blue-600" },
-                { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-                { icon: Instagram, href: "#", color: "hover:text-pink-500" },
+                { icon: Linkedin, href: "", color: "hover:text-blue-600" },
+                {
+                  icon: Facebook,
+                  href: "https://web.facebook.com/profile.php?id=61578835523898",
+                  color: "hover:text-blue-400",
+                },
+                { icon: Instagram, href: "", color: "hover:text-pink-500" },
               ].map((social, index) => {
                 const Icon = social.icon;
                 return (
