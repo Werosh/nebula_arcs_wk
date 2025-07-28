@@ -178,9 +178,9 @@ export default function ContactSection() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   // Initialize EmailJS (replace with your actual credentials)
-  const EMAILJS_SERVICE_ID = "your_service_id";
-  const EMAILJS_TEMPLATE_ID = "your_template_id";
-  const EMAILJS_PUBLIC_KEY = "your_public_key";
+  const EMAILJS_SERVICE_ID = "service_fqn5e9l";
+  const EMAILJS_TEMPLATE_ID = "template_h09hqt6";
+  const EMAILJS_PUBLIC_KEY = "EzReJSUxpdt8P7ZqI";
 
   const handleServiceToggle = (serviceId) => {
     setSelectedServices((prev) =>
