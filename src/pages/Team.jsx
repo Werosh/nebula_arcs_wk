@@ -18,6 +18,7 @@ import WeroshImg from "../assets/team/werosh.webp";
 import BashithaImg from "../assets/team/bhashitha.webp";
 import IsuruImg from "../assets/team/isuru.webp";
 import UmeshaImg from "../assets/team/umesha.webp";
+import ShashikalaImg from "../assets/team/shashikala.webp";
 
 const teamMembers = [
   {
@@ -159,7 +160,7 @@ const teamMembers = [
     },
   },
   {
-    id: 6,
+    id: 7,
     name: "Umesha Sidangana",
     position: "HR Manager",
     image: UmeshaImg,
@@ -172,16 +173,40 @@ const teamMembers = [
       "Conflict Resolution",
       "Payroll & HRIS",
     ],
-    experience: "2+ years",
-    portfolio: "https://www.facebook.com/share/16aUFVivd4/?mibextid=wwXIfr",
+    experience: "1+ years",
+    portfolio: "https://www.facebook.com/share/16gSB3nUhC/?mibextid=wwXIfr",
     social: {
-      linkedin: "",
+      linkedin: "empty@email.com",
       instagram:
-        "https://www.instagram.com/shan__x.s?igsh=Nml2ZXZveWhpOHYw&utm_source=qr",
+        "https://www.instagram.com/________ushi_________?igsh=enJrNHoxaWs1YzM5",
     },
     contact: {
-      email: "isurumadhushan881@gmail.com",
-      phone: "+94 (70) 332-7341",
+      email: "",
+      phone: "+94 (70) 138-8221",
+    },
+  },
+  {
+    id: 8,
+    name: "Shashikala Bandara",
+    position: "Script Writer",
+    image: ShashikalaImg,
+    bio: "Drama and theater undergraduate with a passion for script writing. Bringing stories to life through compelling narratives and characters",
+    skills: [
+      "Writing & Storytelling",
+      "Dialogue Crafting",
+      "Character Development",
+      "Plot Structuring",
+      "Creative Writing",
+    ],
+    experience: "1+ years",
+    portfolio: "https://www.instagram.com/shikzz20?igsh=MzRlODBiNWFlZA==",
+    social: {
+      linkedin: "",
+      instagram: "https://www.instagram.com/shikzz20?igsh=MzRlODBiNWFlZA==",
+    },
+    contact: {
+      email: "bandarashashi532@gmail.com",
+      phone: "+94 (71) 131-7449", //0711317449
     },
   },
 ];
