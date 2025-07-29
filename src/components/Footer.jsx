@@ -314,9 +314,9 @@ export default function Footer() {
                 </span>
               </div>
               <div>
-                <span className="text-gray-500">Made with</span>
+                {/* <span className="text-gray-500">Made with</span>
                 <Heart className="inline-block w-4 h-4 text-red-500 mx-1" />
-                <span className="text-gray-500">by Nebula Arcs</span>
+                <span className="text-gray-500">by Nebula Arcs</span> */}
               </div>
 
               <div className="flex items-center space-x-6 text-sm text-gray-400">
