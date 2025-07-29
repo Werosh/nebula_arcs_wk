@@ -184,6 +184,30 @@ const teamMembers = [
     },
   },
   {
+    id: 8,
+    name: "Shashikala Bandara",
+    position: "Script Writer",
+    image: ShashikalaImg,
+    bio: "Drama and theater undergraduate with a passion for script writing. Bringing stories to life through compelling narratives and characters",
+    skills: [
+      "Writing & Storytelling",
+      "Dialogue Crafting",
+      "Character Development",
+      "Plot Structuring",
+      "Creative Writing",
+    ],
+    experience: "1+ years",
+    portfolio: "https://www.instagram.com/shikzz20?igsh=MzRlODBiNWFlZA==",
+    social: {
+      linkedin: "",
+      instagram: "https://www.instagram.com/shikzz20?igsh=MzRlODBiNWFlZA==",
+    },
+    contact: {
+      email: "bandarashashi532@gmail.com",
+      phone: "+94 (71) 131-7449",
+    },
+  },
+  {
     id: 6,
     name: "Isuru Madhushan",
     position: "Graphic Designer",
@@ -209,30 +233,7 @@ const teamMembers = [
       phone: "+94 (70) 332-7341",
     },
   },
-  {
-    id: 8,
-    name: "Shashikala Bandara",
-    position: "Script Writer",
-    image: ShashikalaImg,
-    bio: "Drama and theater undergraduate with a passion for script writing. Bringing stories to life through compelling narratives and characters",
-    skills: [
-      "Writing & Storytelling",
-      "Dialogue Crafting",
-      "Character Development",
-      "Plot Structuring",
-      "Creative Writing",
-    ],
-    experience: "1+ years",
-    portfolio: "https://www.instagram.com/shikzz20?igsh=MzRlODBiNWFlZA==",
-    social: {
-      linkedin: "",
-      instagram: "https://www.instagram.com/shikzz20?igsh=MzRlODBiNWFlZA==",
-    },
-    contact: {
-      email: "bandarashashi532@gmail.com",
-      phone: "+94 (71) 131-7449",
-    },
-  },
+
   {
     id: 7,
     name: "Umesha Weerasinghe",
