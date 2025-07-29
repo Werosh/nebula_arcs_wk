@@ -20,6 +20,8 @@ import IsuruImg from "../assets/team/isuru.webp";
 import ShashikalaImg from "../assets/team/shashikala.webp";
 import TharushiImg from "../assets/team/tharushi.webp";
 import ViharaImg from "../assets/team/vihara.webp";
+import HeshaniImg from "../assets/team/heshani.webp";
+import RanumiImg from "../assets/team/ranumi.webp";
 
 const teamMembers = [
   {
@@ -81,7 +83,7 @@ const teamMembers = [
       instagram: "https://www.instagram.com/werosh_k/",
     },
     contact: {
-      email: "weroshprofy@gmail.com",
+      email: "werosh.dev@nebulaarcs.com",
       phone: "+94 (74) 220-9812",
     },
   },
@@ -137,16 +139,16 @@ const teamMembers = [
   },
   {
     id: 9,
-    name: "Tharushi Lochana",
-    position: "Project Manager",
+    name: "Lochana Sugathadasa",
+    position: "Content Creator",
     image: TharushiImg,
-    bio: "Organized and detail-oriented Project Manager with a background in drama and theater. Skilled in leading cross-functional teams, coordinating resources, and ensuring timely delivery of creative and technical projects.",
+    bio: "Creative and versatile Content Creator with a flair for storytelling and visual design. Experienced in crafting engaging content across social media platforms, scripting, video production, and branding strategies.",
     skills: [
-      "Project Planning",
-      "Team Leadership",
-      "Resource Allocation",
-      "Timeline Management",
-      "Communication & Collaboration",
+      "Content Strategy",
+      "Script Writing",
+      "Video Editing",
+      "Social Media Management",
+      "Creative Storytelling",
     ],
     experience: "2+ years",
     portfolio: "",
@@ -159,6 +161,7 @@ const teamMembers = [
       phone: "",
     },
   },
+
   {
     id: 8,
     name: "Gimhani Thennakoon",
@@ -183,6 +186,32 @@ const teamMembers = [
       phone: "+94 (76) 949-6250",
     },
   },
+  {
+    id: 8,
+    name: "Heshani Telmika",
+    position: "DevOps Engineer",
+    image: HeshaniImg,
+    bio: "Proactive DevOps Engineer with a passion for automation, CI/CD pipelines, and cloud infrastructure. Skilled in streamlining development workflows and enhancing system reliability through robust deployment strategies.",
+    skills: [
+      "CI/CD Pipeline Implementation",
+      "Cloud Infrastructure (AWS/Azure)",
+      "Docker & Kubernetes",
+      "Infrastructure as Code (Terraform)",
+      "Monitoring & Logging (Prometheus, Grafana)",
+    ],
+    experience: "4+ years",
+    portfolio: "https://colormetiru.netlify.app/",
+    social: {
+      linkedin: "https://www.linkedin.com/in/heshani-tirunika/",
+      github: "https://github.com/Tirunika",
+      instagram: "https://www.instagram.com/vihararashh/",
+    },
+    contact: {
+      email: "vihararashmi2@gmail.com",
+      phone: "+94 (76) 949-6250",
+    },
+  },
+
   {
     id: 8,
     name: "Shashikala Bandara",
@@ -231,6 +260,31 @@ const teamMembers = [
     contact: {
       email: "isurumadhushan881@gmail.com",
       phone: "+94 (70) 332-7341",
+    },
+  },
+  {
+    id: 7,
+    name: "Ranumi Omalshi",
+    position: "Company Secretary",
+    image: RanumiImg,
+    bio: "Detail-driven Company Lawyer with experience in corporate law, contract negotiation, and regulatory compliance. Committed to protecting company interests, minimizing legal risks, and ensuring adherence to legal standards across all operations.",
+    skills: [
+      "Corporate Law",
+      "Contract Drafting & Review",
+      "Legal Risk Management",
+      "Regulatory Compliance",
+      "Dispute Resolution",
+      "Intellectual Property",
+    ],
+    experience: "1+ years",
+    portfolio: "",
+    social: {
+      linkedin: "",
+      instagram: "",
+    },
+    contact: {
+      email: "ranumiovitigala12@gmail.com",
+      phone: "+94 (77) 871-3755",
     },
   },
 
