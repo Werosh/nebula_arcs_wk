@@ -41,11 +41,8 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { name: "Privacy Policy", href: "#privacy" },
-  { name: "Terms of Service", href: "#terms" },
-  { name: "Cookie Policy", href: "#cookies" },
-  { name: "Support", href: "#" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms of Service", href: "/term-of-services" },
 ];
 
 const services = [
