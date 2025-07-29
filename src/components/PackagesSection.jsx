@@ -83,7 +83,7 @@ export const PackagesSection = () => {
       {/* Hero Section */}
       <motion.section
         ref={ref}
-        className="py-20 px-4"
+        className=" px-4"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}

@@ -1,4 +1,4 @@
-import { Video } from "lucide-react";
+import { Video, ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -8,6 +8,27 @@ export const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.8,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    tap: {
+      scale: 0.98,
+    },
+  };
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -187,9 +208,18 @@ export const AboutSection = () => {
             {/* View Team Button */}
             <motion.div variants={itemVariants} className="pt-6">
               <a href="/team">
-                <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-purple-700">
-                  View Team
-                </button>
+                <motion.div
+                  className="text-center "
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                  whileTap="tap"
+                >
+                  <button className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 rounded-lg bg-[#043b4f] text-white font-medium hover:bg-blue-700 transition-colors">
+                    View Our Team
+                  </button>
+                </motion.div>
               </a>
             </motion.div>
           </motion.div>

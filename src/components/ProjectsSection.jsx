@@ -235,7 +235,7 @@ export const ProjectsSection = () => {
         >
           <button
             onClick={handleViewMore}
-            className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
+            className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 rounded-lg bg- text-white font-medium hover:bg-primary/90 transition-colors"
           >
             View More Projects <ArrowRight size={16} />
           </button>

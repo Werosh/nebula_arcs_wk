@@ -14,7 +14,7 @@ import {
 import ShehanIMG from "../assets/team/shehan.webp";
 import VihangaIMG from "../assets/team/vihaga.webp";
 import WeroshImg from "../assets/team/werosh.webp";
-// import MadukaImg from "../assets/team/maduka.webp"; // Placeholder for Maduka's image
+import MadukaImg from "../assets/team/maduka.webp";
 import BashithaImg from "../assets/team/bhashitha.webp";
 import IsuruImg from "../assets/team/isuru.webp";
 import UmeshaImg from "../assets/team/umesha.webp";
@@ -26,9 +26,9 @@ const teamMembers = [
     name: "Shehan Deshapriya",
     position: "Founder & CEO  ",
     image: ShehanIMG,
-    bio: "Visionary leader with 3+ years in tech industry. Passionate about building innovative solutions that transform businesses and create meaningful impact.",
+    bio: "Visionary leader with 3+ years in the tech industry and 4+ years of business management experience, passionate about building innovative solutions that transform businesses and create meaningful impact.",
     skills: ["Leadership", "Strategy", "Innovation", "Business Development"],
-    experience: "3+ years",
+    experience: "4+ years",
     portfolio: "",
     social: {
       linkedin: "",
@@ -43,7 +43,7 @@ const teamMembers = [
   {
     id: 2,
     name: "Vihanga Melindra",
-    position: "Co-Founder & CTO",
+    position: "Fullstack Developer & CTO",
     image: VihangaIMG,
     bio: "Full-stack developer specializing in modern web technologies. Expert in React, Node.js, and cloud architecture with a passion for clean, scalable code.",
     skills: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
@@ -86,33 +86,34 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Maduka ...",
-    position: "Fullstack Developer",
-    image: "",
-    bio: "Strategic marketer with expertise in digital campaigns and brand growth. Passionate about data-driven marketing that connects brands with their audience.",
+    name: "Maduka Aththanayaka",
+    position: "Software Developer",
+    image: MadukaImg,
+    bio: "I'm a Full Stack Developer with experience in building scalable web applications from frontend to backend. I also work with AI/ML models and DevOps practices to streamline development and deployment.",
     skills: [
-      "Digital Marketing",
-      "SEO",
-      "Content Strategy",
-      "Analytics",
-      "Social Media",
+      "Fullstack Development",
+      "DevOps",
+      "AI/ML",
+      "Mobile Application Development",
+      "Agentic AI",
     ],
-    experience: "10+ years",
-    portfolio: "https://emmarodriguez.marketing",
+    experience: "1+ years",
+    portfolio: "https://portfolio-madhuka2002s-projects.vercel.app/",
     social: {
-      linkedin: "https://linkedin.com/in/emmarodriguez",
-      twitter: "https://twitter.com/emmamarketing",
-      website: "https://emmarodriguez.marketing",
+      linkedin: "https://www.linkedin.com/in/madhuka-malshan-759119301/",
+      github: "https://github.com/madhuka2002",
+      twitter: "",
+      website: "",
     },
     contact: {
-      email: "emma@company.com",
-      phone: "+1 (555) 123-4570",
+      email: "madhukaaththanayaka@gmail.com",
+      phone: "+94 (75) 897-3870",
     },
   },
   {
     id: 5,
     name: "Bhashitha Ekanayaka",
-    position: "Videographer",
+    position: "Videographer & Photographer",
     image: BashithaImg,
     bio: "Creative professional with 6+ years in photography and videography, currently working in graphic design,  and visual content creation.",
     skills: [
@@ -136,7 +137,7 @@ const teamMembers = [
   {
     id: 6,
     name: "Isuru Madhushan",
-    position: "Photo Editor",
+    position: "Graphic Designer",
     image: IsuruImg,
     bio: "Multifaceted media creator,editor, photographer, junior choreographer & social media strategist. Turning ideas into powerful content.",
     skills: [
@@ -163,7 +164,8 @@ const teamMembers = [
     id: 7,
     name: "Umesha Sidangana",
     position: "HR Manager",
-    image: UmeshaImg,
+    image:
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
     bio: "Strategic HR Manager with strong experience in talent acquisition, employee engagement, and organizational development. Skilled in implementing HR policies, managing performance systems, and fostering a productive workplace culture.",
     skills: [
       "Talent Acquisition",
@@ -206,7 +208,32 @@ const teamMembers = [
     },
     contact: {
       email: "bandarashashi532@gmail.com",
-      phone: "+94 (71) 131-7449", //0711317449
+      phone: "+94 (71) 131-7449",
+    },
+  },
+  {
+    id: 9,
+    name: "Tharushi Lochana",
+    position: "Project Manager",
+    image:
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
+    bio: "Organized and detail-oriented Project Manager with a background in drama and theater. Skilled in leading cross-functional teams, coordinating resources, and ensuring timely delivery of creative and technical projects.",
+    skills: [
+      "Project Planning",
+      "Team Leadership",
+      "Resource Allocation",
+      "Timeline Management",
+      "Communication & Collaboration",
+    ],
+    experience: "2+ years",
+    portfolio: "",
+    social: {
+      linkedin: "",
+      instagram: "",
+    },
+    contact: {
+      email: "",
+      phone: "",
     },
   },
 ];
@@ -354,6 +381,7 @@ export default function TeamPage() {
                     whileHover={{ scale: 1.1 }}
                   >
                     <img
+                      loading="lazy"
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
@@ -435,6 +463,7 @@ export default function TeamPage() {
                     transition={{ delay: 0.2 }}
                   >
                     <img
+                      loading="lazy"
                       src={selectedMember.image}
                       alt={selectedMember.name}
                       className="w-full h-full object-cover"
