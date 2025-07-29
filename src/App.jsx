@@ -10,6 +10,7 @@ import ProjectPage from "./pages/ProjectPage";
 import TeamPage from "./pages/Team";
 import PrivacyPolicy from "./commonPages/PrivacyPolocy";
 import TermsOfService from "./commonPages/TermsOfService";
+import QualityPolicy from "./commonPages/quality-policy";
 // Scroll to element by hash (e.g., #about)
 function ScrollToHashElement() {
   const location = useLocation();
@@ -46,6 +47,7 @@ function App() {
             {/* Footer Pages */}
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/term-of-services" element={<TermsOfService />} />
+            <Route path="/quality-policy" element={<QualityPolicy />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

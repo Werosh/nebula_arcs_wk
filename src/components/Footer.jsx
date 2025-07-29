@@ -42,6 +42,7 @@ const socialLinks = [
 
 const quickLinks = [
   { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Quality Policy", href: "/quality-policy" },
   { name: "Terms of Service", href: "/term-of-services" },
 ];
 
