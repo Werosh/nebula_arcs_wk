@@ -83,7 +83,7 @@ export const PackagesSection = () => {
       {/* Hero Section */}
       <motion.section
         ref={ref}
-        className="py-20 px-4"
+        className="py-0 px-4"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
@@ -93,7 +93,7 @@ export const PackagesSection = () => {
             {/* Left Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.h1
-                className="text-4xl md:text-5xl mt-15 font-bold leading-tight text-[#ffffff]"
+                className="text-4xl md:text-5xl mt-0 font-bold leading-tight text-[#ffffff] text-right"
                 variants={itemVariants}
               >
                 Our Professional
@@ -101,7 +101,7 @@ export const PackagesSection = () => {
               </motion.h1>
 
               <motion.p
-                className="text-gray-500 text-lg leading-relaxed"
+                className="text-gray-500 text-lg leading-relaxed text-right"
                 variants={itemVariants}
               >
                 We provide comprehensive solutions to help your business thrive
@@ -116,9 +116,10 @@ export const PackagesSection = () => {
                 animate={isInView ? "visible" : "hidden"}
                 whileHover="hover"
                 whileTap="tap"
+                className="flex justify-end"
               >
                 <motion.button
-                  className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-bold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl border border-blue-500/20 backdrop-blur-sm flex items-center gap-4 cursor-pointer group transition-all duration-300"
+                  className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-bold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl border border-blue-500/20 backdrop-blur-sm flex items-center gap-4 cursor-pointer group transition-all duration-300 "
                   onClick={() => {
                     navigate("/services");
                   }}
@@ -183,7 +184,7 @@ export const PackagesSection = () => {
             </motion.div>
 
             {/* Right Illustration */}
-            <motion.div variants={itemVariants} className="relative">
+            <motion.div variants={itemVariants} className="relative ">
               <motion.div
                 className="relative bg-gradient-to-br from-blue-900/15 to-[#043b4f] rounded-3xl p-8"
                 whileHover={{ scale: 1.02 }}
