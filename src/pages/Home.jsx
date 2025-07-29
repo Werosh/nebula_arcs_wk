@@ -3,10 +3,15 @@ import { AboutSection } from "../components/AboutSection";
 import { PackagesSection } from "../components/PackagesSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import ContactSection from "../components/ContactSection";
+import ImagePopup from "../popups/ImagePopup";
 
 export const Home = () => {
   return (
     <>
+      <section>
+        <ImagePopup />
+      </section>
+
       <section id="hero">
         <HeroSection />
       </section>
