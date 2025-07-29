@@ -17,8 +17,9 @@ import WeroshImg from "../assets/team/werosh.webp";
 import MadukaImg from "../assets/team/maduka.webp";
 import BashithaImg from "../assets/team/bhashitha.webp";
 import IsuruImg from "../assets/team/isuru.webp";
-import UmeshaImg from "../assets/team/umesha.webp";
 import ShashikalaImg from "../assets/team/shashikala.webp";
+import TharushiImg from "../assets/team/tharushi.webp";
+import ViharaImg from "../assets/team/vihara.webp";
 
 const teamMembers = [
   {
@@ -135,6 +136,54 @@ const teamMembers = [
     },
   },
   {
+    id: 9,
+    name: "Tharushi Lochana",
+    position: "Project Manager",
+    image: TharushiImg,
+    bio: "Organized and detail-oriented Project Manager with a background in drama and theater. Skilled in leading cross-functional teams, coordinating resources, and ensuring timely delivery of creative and technical projects.",
+    skills: [
+      "Project Planning",
+      "Team Leadership",
+      "Resource Allocation",
+      "Timeline Management",
+      "Communication & Collaboration",
+    ],
+    experience: "2+ years",
+    portfolio: "",
+    social: {
+      linkedin: "",
+      instagram: "",
+    },
+    contact: {
+      email: "",
+      phone: "",
+    },
+  },
+  {
+    id: 8,
+    name: "Gimhani Thennakoon",
+    position: "Quality Assurance Engineer",
+    image: ViharaImg,
+    bio: "Detail-oriented QA Engineer with a strong foundation in software testing and a passion for delivering bug-free, user-centric digital experiences. Adept at both manual and automated testing with an eye for edge cases.",
+    skills: [
+      "Manual & Automated Testing",
+      "Bug Tracking & Reporting",
+      "Test Case Design",
+      "UI/UX Validation",
+      "Cross-Browser Testing",
+    ],
+    experience: "2+ years",
+    portfolio: "https://www.instagram.com/vihararashh/",
+    social: {
+      linkedin: "",
+      instagram: "https://www.instagram.com/vihararashh/",
+    },
+    contact: {
+      email: "vihararashmi2@gmail.com",
+      phone: "+94 (76) 949-6250",
+    },
+  },
+  {
     id: 6,
     name: "Isuru Madhushan",
     position: "Graphic Designer",
@@ -158,33 +207,6 @@ const teamMembers = [
     contact: {
       email: "isurumadhushan881@gmail.com",
       phone: "+94 (70) 332-7341",
-    },
-  },
-  {
-    id: 7,
-    name: "Umesha Sidangana",
-    position: "HR Manager",
-    image:
-      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
-    bio: "Strategic HR Manager with strong experience in talent acquisition, employee engagement, and organizational development. Skilled in implementing HR policies, managing performance systems, and fostering a productive workplace culture.",
-    skills: [
-      "Talent Acquisition",
-      "Employee Relations",
-      "Performance Management",
-      "HR Policy Development",
-      "Conflict Resolution",
-      "Payroll & HRIS",
-    ],
-    experience: "1+ years",
-    portfolio: "https://www.facebook.com/share/16gSB3nUhC/?mibextid=wwXIfr",
-    social: {
-      linkedin: "empty@email.com",
-      instagram:
-        "https://www.instagram.com/________ushi_________?igsh=enJrNHoxaWs1YzM5",
-    },
-    contact: {
-      email: "",
-      phone: "+94 (70) 138-8221",
     },
   },
   {
@@ -212,28 +234,30 @@ const teamMembers = [
     },
   },
   {
-    id: 9,
-    name: "Tharushi Lochana",
-    position: "Project Manager",
+    id: 7,
+    name: "Umesha Weerasinghe",
+    position: "HR Manager",
     image:
       "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
-    bio: "Organized and detail-oriented Project Manager with a background in drama and theater. Skilled in leading cross-functional teams, coordinating resources, and ensuring timely delivery of creative and technical projects.",
+    bio: "Strategic HR Manager with strong experience in talent acquisition, employee engagement, and organizational development. Skilled in implementing HR policies, managing performance systems, and fostering a productive workplace culture.",
     skills: [
-      "Project Planning",
-      "Team Leadership",
-      "Resource Allocation",
-      "Timeline Management",
-      "Communication & Collaboration",
+      "Talent Acquisition",
+      "Employee Relations",
+      "Performance Management",
+      "HR Policy Development",
+      "Conflict Resolution",
+      "Payroll & HRIS",
     ],
-    experience: "2+ years",
-    portfolio: "",
+    experience: "1+ years",
+    portfolio: "https://www.facebook.com/share/16gSB3nUhC/?mibextid=wwXIfr",
     social: {
-      linkedin: "",
-      instagram: "",
+      linkedin: "empty@email.com",
+      instagram:
+        "https://www.instagram.com/________ushi_________?igsh=enJrNHoxaWs1YzM5",
     },
     contact: {
       email: "",
-      phone: "",
+      phone: "+94 (70) 138-8221",
     },
   },
 ];
