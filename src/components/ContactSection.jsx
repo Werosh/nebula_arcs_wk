@@ -307,7 +307,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 relative">
+    <section ref={sectionRef} className="mb-20 px-4 relative">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

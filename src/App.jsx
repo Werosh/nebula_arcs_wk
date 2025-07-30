@@ -7,6 +7,10 @@ import Layout from "./components/Layout";
 import { useEffect } from "react";
 import { ScrollToTop } from "./components/ScrollToTop";
 import ProjectPage from "./pages/ProjectPage";
+import TeamPage from "./pages/Team";
+import PrivacyPolicy from "./commonPages/PrivacyPolocy";
+import TermsOfService from "./commonPages/TermsOfService";
+import QualityPolicy from "./commonPages/quality-policy";
 // Scroll to element by hash (e.g., #about)
 function ScrollToHashElement() {
   const location = useLocation();
@@ -38,6 +42,13 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<ProjectPage />} />
+            <Route path="/team" element={<TeamPage />} />
+
+            {/* Footer Pages */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/term-of-services" element={<TermsOfService />} />
+            <Route path="/quality-policy" element={<QualityPolicy />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

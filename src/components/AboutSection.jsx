@@ -1,4 +1,4 @@
-import { Video } from "lucide-react";
+import { Video, ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -8,6 +8,27 @@ export const AboutSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.8,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+    tap: {
+      scale: 0.98,
+    },
+  };
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -139,7 +160,7 @@ export const AboutSection = () => {
               </h3>
 
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                At Nebula Arcs, we’re a team of creators, developers, and
+                At Nebula Arcs, we're a team of creators, developers, and
                 strategists who turn ideas into impactful digital experiences.
                 From websites to mobile apps, we blend design and technology to
                 build things that work beautifully and make a real difference.
@@ -149,7 +170,7 @@ export const AboutSection = () => {
                 We offer a wide range of services..including SEO, digital
                 marketing, content creation, AI video, and branding.All crafted
                 with passion and precision. Whether you're starting fresh or
-                scaling up, we’re here to help you grow, every step of the way.
+                scaling up, we're here to help you grow, every step of the way.
               </p>
             </motion.div>
 
@@ -182,6 +203,24 @@ export const AboutSection = () => {
                   Years Experience
                 </div>
               </div>
+            </motion.div>
+
+            {/* View Team Button */}
+            <motion.div variants={itemVariants} className="pt-6">
+              <a href="/team">
+                <motion.div
+                  className="text-center "
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover="hover"
+                  whileTap="tap"
+                >
+                  <button className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 rounded-lg bg-[#043b4f] text-white font-medium hover:bg-blue-700 transition-colors">
+                    View Our Team
+                  </button>
+                </motion.div>
+              </a>
             </motion.div>
           </motion.div>
         </div>

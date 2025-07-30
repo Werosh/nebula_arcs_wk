@@ -41,11 +41,9 @@ const socialLinks = [
 ];
 
 const quickLinks = [
-  { name: "Privacy Policy", href: "#privacy" },
-  { name: "Terms of Service", href: "#terms" },
-  { name: "Cookie Policy", href: "#cookies" },
-  { name: "Support", href: "#" },
-  { name: "Contact Us", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Quality Policy", href: "/quality-policy" },
+  { name: "Terms of Service", href: "/term-of-services" },
 ];
 
 const services = [
@@ -316,9 +314,9 @@ export default function Footer() {
                 </span>
               </div>
               <div>
-                <span className="text-gray-500">Made with</span>
+                {/* <span className="text-gray-500">Made with</span>
                 <Heart className="inline-block w-4 h-4 text-red-500 mx-1" />
-                <span className="text-gray-500">by Nebula Arcs</span>
+                <span className="text-gray-500">by Nebula Arcs</span> */}
               </div>
 
               <div className="flex items-center space-x-6 text-sm text-gray-400">
