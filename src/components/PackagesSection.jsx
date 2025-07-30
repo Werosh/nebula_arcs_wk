@@ -93,7 +93,7 @@ export const PackagesSection = () => {
             {/* Left Content */}
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.h1
-                className="text-4xl md:text-5xl mt-0 font-bold leading-tight text-[#ffffff] text-right"
+                className="text-4xl md:text-5xl mt-0 font-bold leading-tight text-[#ffffff] lg:text-right text-center"
                 variants={itemVariants}
               >
                 Our Professional
@@ -101,7 +101,7 @@ export const PackagesSection = () => {
               </motion.h1>
 
               <motion.p
-                className="text-gray-500 text-lg leading-relaxed text-right"
+                className="text-gray-500 text-lg leading-relaxed lg:text-right text-center"
                 variants={itemVariants}
               >
                 We provide comprehensive solutions to help your business thrive
@@ -116,7 +116,7 @@ export const PackagesSection = () => {
                 animate={isInView ? "visible" : "hidden"}
                 whileHover="hover"
                 whileTap="tap"
-                className="flex justify-center mt-6"
+                className="flex lg:justify-end justify-center mt-6"
               >
                 <motion.button
                   className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 hover:from-blue-700 hover:via-blue-800 hover:to-blue-900 text-white font-bold px-10 py-4 rounded-2xl shadow-xl hover:shadow-2xl border border-blue-500/20 backdrop-blur-sm flex items-center gap-4 cursor-pointer group transition-all duration-300 "
@@ -186,11 +186,11 @@ export const PackagesSection = () => {
             {/* Right Illustration */}
             <motion.div variants={itemVariants} className="relative ">
               <motion.div
-                className="relative bg-gradient-to-br from-blue-900/15 to-[#043b4f] rounded-3xl p-8"
+                className="relative bg-gradient-to-br from-blue-900/15 to-[#043b4f] rounded-3xl p-5"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3">
                   {heroImages.map((imageUrl, index) => (
                     <motion.div
                       key={index}
