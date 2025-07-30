@@ -155,7 +155,7 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-6 text-center">
                 <motion.div
                   className="flex flex-wrap gap-2 mb-4"
                   initial={{ opacity: 0 }}
@@ -194,7 +194,7 @@ export const ProjectsSection = () => {
                 </motion.p>
 
                 <motion.div
-                  className="flex justify-between items-center"
+                  className="flex justify-between items-center text-center"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
