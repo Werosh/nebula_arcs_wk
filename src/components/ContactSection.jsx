@@ -370,7 +370,7 @@ export default function ContactSection() {
               {
                 icon: Phone,
                 label: "Phone",
-                value: "+94 (0)70 360 8328",
+                value: "+94 70 360 8328",
                 href: "tel:+94703608328",
               },
               {
@@ -419,7 +419,11 @@ export default function ContactSection() {
             </h4>
             <div className="flex justify-center space-x-4">
               {[
-                { icon: Linkedin, href: "", color: "hover:text-blue-600" },
+                {
+                  icon: Linkedin,
+                  href: "http://www.linkedin.com/in/nebula-arcs",
+                  color: "hover:text-blue-600",
+                },
                 {
                   icon: Facebook,
                   href: "https://web.facebook.com/profile.php?id=61578835523898",
