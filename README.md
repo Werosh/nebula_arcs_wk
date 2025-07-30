@@ -68,4 +68,4 @@ Crafted with ❤️ by the Nebula Arcs team.
 
 
 
-Let me know if you'd like this in `.md` file format or want to include screenshots or badges (Netlify, GitHub stars, etc.).
+
