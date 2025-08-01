@@ -89,7 +89,7 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Maduka Aththanayaka",
+    name: "Madhuka Aththanayaka",
     position: "Software Developer",
     image: MadukaImg,
     bio: "I'm a Full Stack Developer with experience in building scalable web applications from frontend to backend. I also work with AI/ML models and DevOps practices to streamline development and deployment.",
@@ -279,7 +279,7 @@ const teamMembers = [
     experience: "1+ years",
     portfolio: "",
     social: {
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/ranumi-omalshi-079b49377/",
       instagram: "",
     },
     contact: {
