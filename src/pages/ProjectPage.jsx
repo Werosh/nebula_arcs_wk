@@ -18,6 +18,13 @@ import VisaImg from "../assets/project_images/vizalk.webp";
 import LucianImg from "../assets/project_images/lucian.webp";
 import DigasiriImg from "../assets/project_images/digasiri.webp";
 
+//photography images
+import LumioImg from "../assets/images/photography/lumio.webp";
+import NurseImg from "../assets/images/photography/nurse.webp";
+import UmeshaImg from "../assets/images/photography/umesha.webp";
+import WesImg from "../assets/images/photography/wes.webp";
+import RavinduImg from "../assets/images/photography/ravindu.webp";
+
 const categories = [
   "All Projects",
   "Website Development",
@@ -123,8 +130,7 @@ const projects = [
     title: "In frame - Chathu Rathnayaka",
     description:
       "A heartfelt photo session capturing the pride, resilience, and achievement of newly graduated nurses. This shoot blends elegance with emotion—featuring crisp white uniforms, graduation gowns, stethoscopes, and natural smiles that reflect years of hard work and compassion. Set in serene outdoor backdrops or clean studio light, every frame tells a story of dedication, care, and a future ready to heal the world.",
-    image:
-      "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/504177350_705067985229125_4891690034899797545_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeECztu7o2fCQwcKrrXMBc_NxMXhP9LB2J3ExeE_0sHYnWfiLV6kvU7vS_RjYqoaLSmQ4KJ8oB_r6x5JfvFyMo2v&_nc_ohc=b7c3JXQylO4Q7kNvwEgITBG&_nc_oc=AdnOlIXPZY9z0vNx2SEhLOfT7Lhidi7Q8EvFO4xpqMIwxZ1FbRvUQnB3aS-DJ2Ir6-wYhRYt10v9RnurQgWDv6EU&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=4SKegBkktg-HpPMzE0zTJw&oh=00_AfTNZGrUJOLyLLrazr0SQ4Hl4y7ZmgvUWBNrdkaGSEdLCw&oe=688AFE56",
+    image: NurseImg,
     category: "Photography and Videography",
     tags: ["Photography", "Product Shots", "Editing", "Commercial"],
     demoUrl: "https://www.facebook.com/share/p/19kcr2aXgB/",
@@ -137,8 +143,7 @@ const projects = [
     title: "In Frame - Umesha Sidangana  Birth Day",
     description:
       "A joyful and elegant birthday shoot capturing the personality and celebration of Umesha Sidangana’s special day. This session blends candid smiles, posed portraits, and detail shots of décor, cake, and style—framed with natural lighting and soft tones to create timeless memories full of charm and warmth.",
-    image:
-      "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/481947696_1226802818868380_250123787957236774_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeG9h5OZadq_vO7adzyVzPMxphMJIGX_MW2mEwkgZf8xbUgwne6ypNyRlI0LtKx0Vh_zHqQxa9WV8FjWWFnbVeLN&_nc_ohc=e-Rakh61thQQ7kNvwGIrxMh&_nc_oc=AdnDbMuvGMF6V4jnZHuFsCIx_hnfxQtCPaaCkT49I1kguaUtV3N8RkdRGv52pSyt_fq0EpvPMAvrXVfrWwxpopaE&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=4Kt5l_1D-uvjfAZDp1rjww&oh=00_AfTRMWTRXIOomhvCQddbdVCFopuTm72Q8_NX3K4R0XvbVw&oe=688B167C",
+    image: UmeshaImg,
     category: "Photography and Videography",
     tags: ["Photography", "Product Shots", "Editing", "Commercial"],
     demoUrl: "https://www.facebook.com/share/p/1LcUjMXycg/",
@@ -151,8 +156,7 @@ const projects = [
     title: "Wes Mangalya Video Shoot",
     description:
       "A vibrant and cinematic video production capturing the elegance and rhythm of the Wes Mangalya, a traditional Sri Lankan dance ceremony performed during weddings. This shoot highlights graceful Kandyan dance movements, cultural attire, ceremonial drumming, and the spiritual energy that honors heritage, blessings, and unity. Shot with dynamic angles, slow-motion, and storytelling flow to reflect both the cultural depth and joyous celebration.",
-    image:
-      "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/487511216_590498024010094_1893953343173234933_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF_zWOpXhEKBtdcoc_5dym1niTgDsyuHQqeJOAOzK4dCn6ouEHME-_lEf_bHsU9ZSmFInOFMmZo6zCi2quF3gvU&_nc_ohc=FdjeLX2ed8UQ7kNvwFaVuOh&_nc_oc=Adlrow41HNMOdwle_wX40NV2CXxrylkCVH3trprUvSoe6Vh8x8Gdxw-QRry_XS4_lneljddd_OOey5D7_QhZxfrv&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=TZm38OjMI7WU_zIHlazIYA&oh=00_AfSUKltYvXYYgz9Z4GalDXVnwZVOEBAyIxBnrRrq-qOxiA&oe=688ADD38",
+    image: WesImg,
     category: "Photography and Videography",
     tags: [
       "Photography",
@@ -171,8 +175,7 @@ const projects = [
     title: "Couple Pre-Shoot – Love in Every Frame",
     description:
       "A dreamy outdoor pre-shoot capturing the chemistry, laughter, and tender moments of a couple before their big day. With a blend of candid poses, natural lighting, and scenic backdrops, this session tells a heartfelt visual story of love, connection, and new beginnings—framed with elegance and emotion.",
-    image:
-      "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/470216409_122096671952696103_6341353054595559678_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGlEGEL8t83ifZ3mD84c3uDWBjebRWosnlYGN5tFaiyeU6IYw6STuFujn4b-wTlWzumWLCLlXlQ4jdZ8pexvdLG&_nc_ohc=DugGuHQMOSsQ7kNvwEU3lF9&_nc_oc=Adk2InuQxG94idE9nT_Gc2hNvKxMNd3qUPCzv6xdjxl7KCB-cnFIQNv5BNUZg1GwajQZs4y-C3tsNVkAGsJdHZP9&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=c8BLKv6OtzaOyA20PDvv8A&oh=00_AfQyYGfFp-4_W-u9euzS3IEbQD9sVgcIhJuw9PG3Uo0_iw&oe=688AEF78",
+    image: LumioImg,
     category: "Photography and Videography",
     tags: [
       "Photography",
@@ -212,8 +215,7 @@ const projects = [
     title: "Couple Pre-Shoot – Photography",
     description:
       "A romantic photography session celebrating the bond between two souls ahead of their wedding day. Blending natural light, candid expressions, and scenic settings, this shoot beautifully frames the joy, intimacy, and anticipation of their journey together. Every photo is a lasting memory crafted with emotion and style.",
-    image:
-      "https://scontent.fcmb1-2.fna.fbcdn.net/v/t39.30808-6/470229579_122096673098696103_6183628911443746534_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeECsqlCw2pm3ZvGLM4wsn5EHimKjarwu9EeKYqNqvC70fDAagP77L_l1eWtO6CCWqHmcGbJZxnByaZXiB61Eoc8&_nc_ohc=ol99KIRdC8kQ7kNvwGAyplo&_nc_oc=Admf-UrTZ5NbD49QE-T-soJ5R6-3KJzMMv1Lo1TqEqQ7IztEoY_K7H9WB3Rpt8bkAYRO6JNPzRpyc9ohGf9_7igC&_nc_zt=23&_nc_ht=scontent.fcmb1-2.fna&_nc_gid=npzucgFifYv974TgAIliCQ&oh=00_AfQQx-5w6PtsAzWsuA8vJt39UHB8KTjwq9qQMKMwDUjslg&oe=688B06B6",
+    image: RavinduImg,
     category: "Photography and Videography",
     tags: ["Photography", "Product Shots", "Editing", "Commercial"],
     demoUrl: "https://www.facebook.com/share/p/16krrAUwr7/",
