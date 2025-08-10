@@ -5,7 +5,7 @@ import FlareupIMG from "../assets/images/brands/flareup-logo.webp";
 import RuhunuImg from "../assets/images/brands/ruhunu trust.png";
 import LusionImg from "../assets/images/brands/lusion buglow.png";
 import RubyImg from "../assets/images/brands/rubistore_logo_menu.png";
-import VisaIMG from "../assets/images/brands/visa.lk Logo.png";
+import VisaIMG from "../assets/images/brands/Visa.lk Logo.png";
 
 const Brands = () => {
   const ref = useRef(null);
