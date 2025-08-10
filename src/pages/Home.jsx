@@ -8,9 +8,11 @@ import ContactSection from "../components/ContactSection";
 export const Home = () => {
   return (
     <>
-{/*       <section>
+      {/*       <section>
         <ImagePopup />
       </section> */}
+
+      {/* test comment  */}
 
       <section id="hero">
         <HeroSection />
