@@ -429,7 +429,11 @@ export default function ContactSection() {
                   href: "https://web.facebook.com/profile.php?id=61578835523898",
                   color: "hover:text-blue-400",
                 },
-                { icon: Instagram, href: "", color: "hover:text-pink-500" },
+                {
+                  icon: Instagram,
+                  href: "https://www.instagram.com/nebula_arcs",
+                  color: "hover:text-pink-500",
+                },
               ].map((social, index) => {
                 const Icon = social.icon;
                 return (

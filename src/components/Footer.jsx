@@ -30,7 +30,7 @@ const socialLinks = [
   // { icon: Twitter, href: "https://twitter.com/nebulaarcs", label: "Twitter" },
   {
     icon: Instagram,
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/nebula_arcs",
     label: "Instagram",
   },
   {
