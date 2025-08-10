@@ -3,6 +3,7 @@ import { AboutSection } from "../components/AboutSection";
 import { PackagesSection } from "../components/PackagesSection";
 import { ProjectsSection } from "../components/ProjectsSection";
 import ContactSection from "../components/ContactSection";
+import Brands from "../components/Brands";
 // import ImagePopup from "../popups/ImagePopup";
 
 export const Home = () => {
@@ -28,6 +29,10 @@ export const Home = () => {
 
       <section id="projects">
         <ProjectsSection />
+      </section>
+
+      <section>
+        <Brands />
       </section>
 
       <section id="contact">
