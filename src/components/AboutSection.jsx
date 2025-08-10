@@ -152,7 +152,7 @@ export const AboutSection = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="space-y-8 text-left"
+            className="space-y-8 lg:text-left text-center"
           >
             <motion.div variants={itemVariants} className="space-y-6">
               <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
