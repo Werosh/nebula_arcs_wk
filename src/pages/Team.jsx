@@ -147,7 +147,7 @@ const teamMembers = [
     name: "Lochana Sugathadasa",
     position: "Content Creator",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
     bio: "Creative and versatile Content Creator with a flair for storytelling and visual design. Experienced in crafting engaging content across social media platforms, scripting, video production, and branding strategies.",
     skills: [
       "Content Strategy",
