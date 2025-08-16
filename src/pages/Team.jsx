@@ -29,7 +29,7 @@ const teamMembers = [
     name: "Shehan Deshapriya",
     position: "Founder & CEO  ",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
     bio: "Visionary leader with 3+ years in the tech industry and 4+ years of business management experience, passionate about building innovative solutions that transform businesses and create meaningful impact.",
     skills: ["Leadership", "Strategy", "Innovation", "Business Development"],
     experience: "4+ years",
@@ -49,7 +49,7 @@ const teamMembers = [
     name: "Vihanga Melindra",
     position: "Fullstack Developer & CTO",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
     bio: "Full-stack developer specializing in modern web technologies. Expert in React, Node.js, and cloud architecture with a passion for clean, scalable code.",
     skills: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
     experience: "2+ years",
@@ -68,7 +68,7 @@ const teamMembers = [
     name: "Werosh Kriyanjala",
     position: "Senior Web Developer",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
     bio: "Senior Web Developer building modern, high-performance apps with React and exploring the future of AI-driven tech.",
     skills: [
       "React",
@@ -95,7 +95,7 @@ const teamMembers = [
     name: "Madhuka Aththanayaka",
     position: "Software Developer",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
     bio: "I'm a Full Stack Developer with experience in building scalable web applications from frontend to backend. I also work with AI/ML models and DevOps practices to streamline development and deployment.",
     skills: [
       "Fullstack Development",
@@ -122,7 +122,7 @@ const teamMembers = [
     name: "Bhashitha Ekanayaka",
     position: "Videographer & Photographer",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
     bio: "Creative professional with 6+ years in photography and videography, currently working in graphic design,  and visual content creation.",
     skills: [
       "Photography",
@@ -250,7 +250,7 @@ const teamMembers = [
     name: "Isuru Madhushan",
     position: "Graphic Designer",
     image:
-      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
+      "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg",
     bio: "Multifaceted media creator,editor, photographer, junior choreographer & social media strategist. Turning ideas into powerful content.",
     skills: [
       "Adobe Photoshop",
