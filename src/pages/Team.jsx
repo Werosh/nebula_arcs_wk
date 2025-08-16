@@ -11,24 +11,25 @@ import {
   Phone,
 } from "lucide-react";
 
-import ShehanIMG from "../assets/team/shehan.webp";
-import VihangaIMG from "../assets/team/vihaga.webp";
-import WeroshImg from "../assets/team/werosh.webp";
-import MadukaImg from "../assets/team/maduka.webp";
-import BashithaImg from "../assets/team/bhashitha.webp";
-import IsuruImg from "../assets/team/isuru.webp";
-import ShashikalaImg from "../assets/team/shashikala.webp";
-import TharushiImg from "../assets/team/tharushi.webp";
-import ViharaImg from "../assets/team/vihara.webp";
-import HeshaniImg from "../assets/team/heshani.webp";
-import RanumiImg from "../assets/team/ranumi.webp";
+// import ShehanIMG from "../assets/team/shehan.webp";
+// import VihangaIMG from "../assets/team/vihaga.webp";
+// import WeroshImg from "../assets/team/werosh.webp";
+// import MadukaImg from "../assets/team/maduka.webp";
+// import BashithaImg from "../assets/team/bhashitha.webp";
+// import IsuruImg from "../assets/team/isuru.webp";
+// import ShashikalaImg from "../assets/team/shashikala.webp";
+// import TharushiImg from "../assets/team/tharushi.webp";
+// import ViharaImg from "../assets/team/vihara.webp";
+// import HeshaniImg from "../assets/team/heshani.webp";
+// import RanumiImg from "../assets/team/ranumi.webp";
 
 const teamMembers = [
   {
     id: 1,
     name: "Shehan Deshapriya",
     position: "Founder & CEO  ",
-    image: ShehanIMG,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "Visionary leader with 3+ years in the tech industry and 4+ years of business management experience, passionate about building innovative solutions that transform businesses and create meaningful impact.",
     skills: ["Leadership", "Strategy", "Innovation", "Business Development"],
     experience: "4+ years",
@@ -47,7 +48,8 @@ const teamMembers = [
     id: 2,
     name: "Vihanga Melindra",
     position: "Fullstack Developer & CTO",
-    image: VihangaIMG,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "Full-stack developer specializing in modern web technologies. Expert in React, Node.js, and cloud architecture with a passion for clean, scalable code.",
     skills: ["React", "Node.js", "TypeScript", "AWS", "MongoDB"],
     experience: "2+ years",
@@ -65,7 +67,8 @@ const teamMembers = [
     id: 3,
     name: "Werosh Kriyanjala",
     position: "Senior Web Developer",
-    image: WeroshImg,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "Senior Web Developer building modern, high-performance apps with React and exploring the future of AI-driven tech.",
     skills: [
       "React",
@@ -91,7 +94,8 @@ const teamMembers = [
     id: 4,
     name: "Madhuka Aththanayaka",
     position: "Software Developer",
-    image: MadukaImg,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "I'm a Full Stack Developer with experience in building scalable web applications from frontend to backend. I also work with AI/ML models and DevOps practices to streamline development and deployment.",
     skills: [
       "Fullstack Development",
@@ -117,7 +121,8 @@ const teamMembers = [
     id: 5,
     name: "Bhashitha Ekanayaka",
     position: "Videographer & Photographer",
-    image: BashithaImg,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "Creative professional with 6+ years in photography and videography, currently working in graphic design,  and visual content creation.",
     skills: [
       "Photography",
@@ -141,7 +146,8 @@ const teamMembers = [
     id: 9,
     name: "Lochana Sugathadasa",
     position: "Content Creator",
-    image: TharushiImg,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "Creative and versatile Content Creator with a flair for storytelling and visual design. Experienced in crafting engaging content across social media platforms, scripting, video production, and branding strategies.",
     skills: [
       "Content Strategy",
@@ -166,7 +172,8 @@ const teamMembers = [
     id: 8,
     name: "Gimhani Thennakoon",
     position: "Quality Assurance Engineer",
-    image: ViharaImg,
+    image:
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
     bio: "Detail-oriented QA Engineer with a strong foundation in software testing and a passion for delivering bug-free, user-centric digital experiences. Adept at both manual and automated testing with an eye for edge cases.",
     skills: [
       "Manual & Automated Testing",
@@ -190,7 +197,8 @@ const teamMembers = [
     id: 8,
     name: "Heshani Telmika",
     position: "DevOps Engineer",
-    image: HeshaniImg,
+    image:
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
     bio: "Proactive DevOps Engineer with a passion for automation, CI/CD pipelines, and cloud infrastructure. Skilled in streamlining development workflows and enhancing system reliability through robust deployment strategies.",
     skills: [
       "CI/CD Pipeline Implementation",
@@ -216,7 +224,8 @@ const teamMembers = [
     id: 8,
     name: "Shashikala Bandara",
     position: "Script Writer",
-    image: ShashikalaImg,
+    image:
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
     bio: "Drama and theater undergraduate with a passion for script writing. Bringing stories to life through compelling narratives and characters",
     skills: [
       "Writing & Storytelling",
@@ -240,7 +249,8 @@ const teamMembers = [
     id: 6,
     name: "Isuru Madhushan",
     position: "Graphic Designer",
-    image: IsuruImg,
+    image:
+      "https://www.svgrepo.com/show/382106/male-avatar-boy-face-man-user-9.svg",
     bio: "Multifaceted media creator,editor, photographer, junior choreographer & social media strategist. Turning ideas into powerful content.",
     skills: [
       "Adobe Photoshop",
@@ -266,7 +276,8 @@ const teamMembers = [
     id: 7,
     name: "Ranumi Omalshi",
     position: "Company Secretary",
-    image: RanumiImg,
+    image:
+      "https://cdn1.iconfinder.com/data/icons/website-internet/48/website_-_female_user-512.png",
     bio: "Detail-driven Company Lawyer with experience in corporate law, contract negotiation, and regulatory compliance. Committed to protecting company interests, minimizing legal risks, and ensuring adherence to legal standards across all operations.",
     skills: [
       "Corporate Law",
