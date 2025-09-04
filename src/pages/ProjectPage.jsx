@@ -27,6 +27,7 @@ import RavinduImg from "../assets/images/photography/ravindu.webp";
 
 const categories = [
   "All Projects",
+  "TV Commercial",
   "Website Development",
   "Photography and Videography",
   "AI Video Creations",
@@ -44,6 +45,26 @@ const categories = [
 ];
 
 const projects = [
+  // Tv commercial
+  {
+    id: 1,
+    title: "Ruhunu Trust & Credit TV Commercial",
+    description:
+      "A heartwarming TV commercial with a village theme, focusing on helping middle-class families overcome financial struggles. The ad combines emotional storytelling with charming visuals to connect with the audience.",
+    image: "RuhunuTVCImg", // replace with the actual imported image variable
+    category: "TV Commercial",
+    tags: [
+      "TVC",
+      "Advertising",
+      "Financial Services",
+      "Storytelling",
+      "Emotional",
+    ],
+    demoUrl: "https://web.facebook.com/share/v/19gbKYeVbw/", // replace with actual video link if available
+    date: "2025-08-28",
+    client: "Ruhunu Trust & Credit LTD Commercial",
+  },
+
   // Website Development
   {
     id: 1,

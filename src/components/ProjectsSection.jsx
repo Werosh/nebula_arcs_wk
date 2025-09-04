@@ -4,9 +4,25 @@ import { useNavigate } from "react-router-dom";
 
 import FlareUpImg from "../assets/project_images/flareup.webp";
 import VacanzaImg from "../assets/project_images/vacanza.webp";
-import RubiImg from "../assets/project_images/rubi.webp";
+import RtcImg from "../assets/images/commersial/rtc.webp";
 
 const projects = [
+  {
+    id: 1,
+    title: "Ruhunu Trust & Credit LTD  Commercial",
+    description:
+      "A heartwarming TV commercial with a village theme, highlighting solutions for middle-class families' financial struggles, combining emotional storytelling and charming visuals.",
+    image: RtcImg,
+    tags: [
+      "TVC",
+      "Advertising",
+      "Financial Services",
+      "Storytelling",
+      "Emotional",
+    ],
+    demoUrl: "https://web.facebook.com/share/v/19gbKYeVbw/", // replace with actual video link
+    githubUrl: "#",
+  },
   {
     id: 1,
     title: "Flareup E-Commerce Platform",
@@ -25,16 +41,6 @@ const projects = [
     image: VacanzaImg,
     tags: [],
     demoUrl: "https://www.vacanzainceylon.com/",
-    githubUrl: "",
-  },
-  {
-    id: 3,
-    title: "Rubi Store.lk – E‑Commerce Website",
-    description:
-      "A sleek and responsive online store for electronics in Sri Lanka, featuring fast delivery, secure payments, and an easy shopping experience focused on tech and entertainment products.",
-    image: RubiImg,
-    tags: [],
-    demoUrl: "https://rubistore.lk/",
     githubUrl: "",
   },
 ];
