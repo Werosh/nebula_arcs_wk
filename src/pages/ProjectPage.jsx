@@ -25,6 +25,9 @@ import UmeshaImg from "../assets/images/photography/umesha.webp";
 import WesImg from "../assets/images/photography/wes.webp";
 import RavinduImg from "../assets/images/photography/ravindu.webp";
 
+// tv commersial
+import RtcImg from "../assets/images/commersial/rtc.webp";
+
 const categories = [
   "All Projects",
   "TV Commercial",
@@ -51,7 +54,7 @@ const projects = [
     title: "Ruhunu Trust & Credit TV Commercial",
     description:
       "A heartwarming TV commercial with a village theme, focusing on helping middle-class families overcome financial struggles. The ad combines emotional storytelling with charming visuals to connect with the audience.",
-    image: "RuhunuTVCImg", // replace with the actual imported image variable
+    image: RtcImg, // replace with the actual imported image variable
     category: "TV Commercial",
     tags: [
       "TVC",
